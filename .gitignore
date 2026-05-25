@@ -1,0 +1,32 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+db.sqlite3
+*.log
+media/
+
+# Environment variables
+.env
+.env.*
+
+# Node
+frotend/node_modules/
+frotend/.next/
+frotend/out/
+frotend/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.swp

@@ -46,87 +46,55 @@ export function PromoCards({ cards = DEFAULT_CARDS }: Partial<PromoCardsProps>) 
       {cards.map((card, i) => (
         <div
           key={i}
-          className="relative rounded-xl overflow-hidden flex-1 min-h-[220px] border border-gray-100 shadow-sm hover:shadow-md transition-all cursor-pointer group"
+          className="relative flex-1 min-h-[220px] rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-shadow bg-white"
         >
-          {/* Background Image */}
+          {/* IMAGE ONLY (no overlay, full bleed like AdBanner) */}
           {card.image && (
             <img
               src={card.image}
               alt={card.title}
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           )}
 
-          {/* Overlay */}
-          <div
-            className={`absolute inset-0 ${
-              card.dark
-                ? "bg-black/25"
-                : "bg-gradient-to-r from-white/45 via-white/45 to-white/20"
-            }`}
-          />
-
-          {/* Content */}
-          <div className="relative z-10 h-full flex flex-col px-5 py-5">
-
-            {/* TOP */}
-            <div>
-              {card.brand && (
-                <p
-                  className={`text-[10px] font-bold uppercase tracking-[0.15em] mb-2 ${
-                    card.dark ? "text-gray-300" : "text-gray-500"
-                  }`}
-                >
-                  {card.brand}
-                </p>
-              )}
-
-              <h3
-                className={`text-[18px] font-black leading-tight whitespace-pre-line ${
-                  card.dark ? "text-white" : "text-gray-900"
-                }`}
-              >
-                {card.title}
-              </h3>
+          {/* OPTIONAL: floating brand badge (like AdBanner badge style) */}
+          {card.brand && (
+            <div className="absolute top-3 left-3 z-10 text-[10px] font-black uppercase tracking-[0.15em] text-white drop-shadow-lg">
+              {card.brand}
             </div>
+          )}
 
-            {/* BOTTOM */}
-            <div className="mt-auto flex flex-col items-start">
+          {/* TEXT OVERLAY (no blocking overlay, just floating text) */}
+          <div className="absolute inset-0 z-10 flex flex-col justify-center px-5 pointer-events-none">
+            
+            <h3 className="text-[18px] font-black leading-tight text-white drop-shadow-lg whitespace-pre-line">
+              {card.title}
+            </h3>
 
-              {card.pricePrefix && (
-                <p
-                  className={`text-[10px] font-bold uppercase tracking-widest mt-3 ${
-                    card.dark ? "text-gray-300" : "text-gray-500"
-                  }`}
-                >
-                  {card.pricePrefix}
-                </p>
-              )}
+            {card.pricePrefix && (
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white/80 mt-3">
+                {card.pricePrefix}
+              </p>
+            )}
 
-              {card.price && (
-                <p
-                  className={`text-[24px] font-black ${
-                    card.accentColor ?? "text-[#2ecc40]"
-                  }`}
-                >
-                  {card.price}
-                </p>
-              )}
-
-              {card.ctaLabel && (
-                <a
-                  href={card.ctaHref ?? "#"}
-                  className={`mt-4 text-[11px] font-extrabold px-4 py-2 rounded-lg transition-colors ${
-                    card.dark
-                      ? "bg-white text-gray-900 hover:bg-gray-100"
-                      : "bg-gray-900 text-white hover:bg-gray-700"
-                  }`}
-                >
-                  {card.ctaLabel}
-                </a>
-              )}
-            </div>
+            {card.price && (
+              <p className={`text-[24px] font-black ${card.accentColor ?? "text-white"}`}>
+                {card.price}
+              </p>
+            )}
           </div>
+
+          {/* CTA (floating button like ad style) */}
+          {card.ctaLabel && (
+            <div className="absolute bottom-4 left-5 z-10 pointer-events-auto">
+              <a
+                href={card.ctaHref ?? "#"}
+                className="text-[11px] font-extrabold px-4 py-2 rounded-lg bg-white text-gray-900 hover:bg-[#2ecc40] hover:text-white transition-colors shadow-md"
+              >
+                {card.ctaLabel}
+              </a>
+            </div>
+          )}
         </div>
       ))}
     </div>

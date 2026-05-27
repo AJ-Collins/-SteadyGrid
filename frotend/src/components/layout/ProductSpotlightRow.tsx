@@ -26,7 +26,7 @@ const DEFAULT_PRODUCTS: SpotlightProduct[] = [
     priceColor: "text-[#2ecc40]",
     ctaLabel: "DISCOVER NOW",
     image:
-      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1200&auto=format&fit=crop",
+      "https://thumbs.dreamstime.com/b/energy-storage-batteries-solar-panels-home-power-systems-off-grid-white-background-border-448335956.jpg",
   },
   {
     name: "Logitek Bluetooth",
@@ -34,7 +34,7 @@ const DEFAULT_PRODUCTS: SpotlightProduct[] = [
     tagColor: "text-amber-600",
     description: "Best for all device",
     image:
-      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1200&auto=format&fit=crop",
+      "https://thumbs.dreamstime.com/b/powerful-storage-battery-alternative-power-supply-white-background-you-isolation-lithium-ion-solar-panels-insulation-359009528.jpg",
   },
 ];
 
@@ -47,24 +47,20 @@ export function ProductSpotlightRow({ products = DEFAULT_PRODUCTS }: Partial<Pro
         return (
           <div
             key={i}
-            className="relative w-full max-w-[400px] min-h-[180px] rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all cursor-pointer group"
+            className="relative w-full max-w-[400px] min-h-[180px] rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-all cursor-pointer group"
           >
             {/* Background Image */}
-            {product.image && (
+            <div className="absolute inset-0 overflow-hidden">
               <img
                 src={product.image}
-                alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover blur-2xl scale-110 opacity-10"
               />
-            )}
+            </div>
 
-            {/* Overlay */}
-            <div
-              className={`absolute inset-0 ${
-                isDark
-                  ? "bg-black/25"
-                  : "bg-gradient-to-r from-white/65 via-white/40 to-white/20"
-              }`}
+            {/* Foreground product */}
+            <img
+              src={product.image}
+              className="absolute inset-0 w-full h-full object-contain p-3"
             />
 
             {/* Content */}

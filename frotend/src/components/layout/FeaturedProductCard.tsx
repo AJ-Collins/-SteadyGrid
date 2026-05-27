@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export interface FeaturedProductData {
   id: string;
@@ -25,21 +25,36 @@ interface FeaturedProductProps {
 
 
 function useCountdown(target?: Date) {
-  const calc = () => {
-    if (!target) return { d: 0, h: 0, m: 0, s: 0 };
-    const diff = Math.max(0, target.getTime() - Date.now());
-    return {
-      d: Math.floor(diff / 86400000),
-      h: Math.floor((diff % 86400000) / 3600000),
-      m: Math.floor((diff % 3600000) / 60000),
-      s: Math.floor((diff % 60000) / 1000),
-    };
-  };
-  const [time, setTime] = useState(calc);
+  const [time, setTime] = useState({
+    d: 0,
+    h: 0,
+    m: 0,
+    s: 0,
+  });
+
   useEffect(() => {
-    const id = setInterval(() => setTime(calc()), 1000);
+    if (!target) return;
+
+    const calc = () => {
+      const diff = Math.max(0, target.getTime() - Date.now());
+
+      return {
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff % 86400000) / 3600000),
+        m: Math.floor((diff % 3600000) / 60000),
+        s: Math.floor((diff % 60000) / 1000),
+      };
+    };
+
+    setTime(calc()); // initial sync AFTER mount
+
+    const id = setInterval(() => {
+      setTime(calc());
+    }, 1000);
+
     return () => clearInterval(id);
   }, [target]);
+
   return time;
 }
 
@@ -123,22 +138,19 @@ export function FeaturedProductCard({
 
   return (
     <div className="flex-1 flex flex-col">
-
-      {/* ── Section heading — OUTSIDE the card ── */}
-      <div className="flex items-center justify-between mb-4 px-1">
-        <h2 className="text-[18px] font-black text-[#41d151] uppercase tracking-wider">
-          {title}
-        </h2>
-        {/* <a
-          href={viewAllHref}
-          className="text-[12.5px] font-semibold text-gray-400 hover:text-[#2ecc40] transition-colors"
-        >
-          View All
-        </a> */}
-      </div>
-
       {/* ── White card ── */}
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm flex-1">
+      <div className="bg-white rounded-lg border border-gray-100 shadow-sm flex-1 p-4">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-[18px] font-black text-[#41d151] uppercase tracking-wider">
+            {title}
+          </h1>
+          <a
+            href={viewAllHref}
+            className="text-sm font-semibold text-gray-500 hover:text-[#2ecc40] transition-colors flex items-center gap-1"
+          >
+            See All <ArrowRight size={14} />
+          </a>
+        </div>
         <div className="flex gap-6 p-4 h-full">
 
           {/* Left – thumbnails + main image */}
@@ -171,7 +183,7 @@ export function FeaturedProductCard({
               />
               {/* Save badge */}
               {savings && (
-                <div className="absolute top-3 left-3 bg-[#2ecc40] text-white rounded-xl px-2 py-2 text-start shadow-md">
+                <div className="absolute top-3 right-3 bg-[#2ecc40] text-white px-1 py-1 text-start shadow-md">
                   <p className="text-[9px] font-bold uppercase tracking-wider opacity-90">SAVE</p>
                   <p className="text-[18px] font-black leading-tight">
                     {cur}{savings.toFixed(2)}
@@ -251,23 +263,23 @@ export function FeaturedProductCard({
             )}
 
             {/* Divider */}
-            <div className="w-full h-px bg-gray-100 mb-4" />
+            <div className="w-full h-px bg-gray-100 mb-2" />
 
             {/* Stock progress */}
             {product.soldCount !== undefined && product.totalStock !== undefined && (
-              <div className="mt-auto">
+              <div className="pt-1">
+                <p className="text-[13px] text-gray-500 font-medium">                  
+                  <span className="font-black text-gray-900">
+                    {product.soldCount}
+                  </span>
+                  {" "} items left
+                </p>
                 <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-2">
                   <div
                     className="h-full bg-[#2ecc40] rounded-full transition-all duration-500"
                     style={{ width: `${soldPct}%` }}
                   />
-                </div>
-                <p className="text-[13px] text-gray-500 font-medium">
-                  Sold:{" "}
-                  <span className="font-black text-gray-900">
-                    {product.soldCount}/{product.totalStock}
-                  </span>
-                </p>
+                </div>                
               </div>
             )}
 

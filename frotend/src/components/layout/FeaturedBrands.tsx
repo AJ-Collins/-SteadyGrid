@@ -1,5 +1,7 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
+
 export interface Brand {
   name: string;
   logo: string;        // image URL or placeholder text
@@ -48,9 +50,9 @@ export function FeaturedBrands({
         </h2>
         <a
           href={viewAllHref}
-          className="text-[12.5px] font-semibold text-gray-400 hover:text-[#2ecc40] transition-colors"
+          className="text-sm font-semibold text-gray-500 hover:text-[#2ecc40] transition-colors flex items-center gap-1"
         >
-          View All
+          See All <ArrowRight size={14} />
         </a>
       </div>
 

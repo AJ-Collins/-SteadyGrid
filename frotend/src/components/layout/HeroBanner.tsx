@@ -26,21 +26,21 @@ const DEFAULT_SLIDES: HeroSlide[] = [
     title: "Noise Cancelling\nHeadphone",
     bullets: ["Bose Over-Ear Headphone", "WiFi, Voice Assistant", "Low Latency Game Mode"],
     ctaLabel: "BUY NOW",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1400&auto=format&fit=crop",
+    image: "https://image.made-in-china.com/202f0j00BgGqYURfYmkd/Pay-8kw-10kw-15kw-20kw-Wholesale-off-Grid-on-Gird-Tied-Hybrid-Home-Residential-Photovoltaic-Renewable-Solar-Panel-Electricity-Electric-Energy-Power-System-Price.jpg",
     overlayFrom: "from-black/35",
   },
   {
     title: "Next-Gen\nLaptops",
     bullets: ["Ultra-thin design", "16hr battery life", "OLED 4K display"],
     ctaLabel: "SHOP NOW",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1400&auto=format&fit=crop",
+    image: "https://img.magnific.com/premium-photo/3d-rendering-energy-storage-system-battery-container-unit-with-solar-panels_493806-17683.jpg",
     overlayFrom: "from-black/35",
   },
   {
     title: "Pro Camera\nKits",
     bullets: ["4K 60fps video", "Weather-sealed body", "Dual card slots"],
     ctaLabel: "EXPLORE",
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1400&auto=format&fit=crop",
+    image: "https://w7.pngwing.com/pngs/955/448/png-transparent-solar-panels-solar-power-solar-energy-energy-storage-building-air-on-earth-renewable-energy-business-electricity.png",
     overlayFrom: "from-black/35",
   },
 ];
@@ -79,7 +79,7 @@ export function HeroBanner({
   const slide = slides[current];
 
   return (
-    <div className="relative rounded-xl overflow-hidden w-full max-w-[820px] min-h-[360px] cursor-pointer group">
+    <div className="relative rounded-xl overflow-hidden w-full max-w-[820px] min-h-[360px] bg-white border border-gray-100 shadow-sm group">
 
       {/* Full-bleed background image */}
       <div
@@ -92,24 +92,19 @@ export function HeroBanner({
         {slides.map((s, i) => (
           <div
             key={i}
-            className="relative w-full h-full shrink-0"
+            className="relative w-full h-full shrink-0 bg-white flex items-center justify-center"
             style={{ width: `${100 / slides.length}%` }}
           >
             <img
               src={s.image}
               alt={s.imageAlt ?? s.title}
-              className={`w-full h-full object-cover transition-transform duration-[5000ms] ${
-                i === current ? "scale-105" : "scale-100"
+              className={`w-full h-full object-contain p-8 transition-transform duration-[5000ms] ${
+                i === current ? "scale-[1.03]" : "scale-100"
               }`}
             />
           </div>
         ))}
       </div>
-
-      {/* Left-to-right gradient overlay so text is always readable */}
-      <div className={`absolute inset-0 bg-gradient-to-r ${slide.overlayFrom ?? "from-black/25"} via-black/5 to-transparent z-10`} />
-      {/* Bottom vignette for dot indicators */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
 
       {/* Content */}
       <div
@@ -129,10 +124,13 @@ export function HeroBanner({
         )}
 
         {slide.bullets && (
-          <ul className="flex flex-col gap-1.5 mb-7">
+          <ul className="flex flex-col gap-2 mb-7">
             {slide.bullets.map((b) => (
-              <li key={b} className="flex items-center gap-2 text-[13px] text-white/80 font-medium">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2ecc40] shrink-0" />
+              <li
+                key={b}
+                className="text-[18px] font-semibold text-white/95 leading-snug"
+                style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
+              >
                 {b}
               </li>
             ))}

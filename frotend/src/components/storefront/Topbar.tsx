@@ -2,7 +2,7 @@
 
 import { ChevronDown, Phone, ShoppingCart, Heart, User, CheckCircle2 } from "lucide-react";
 import { NavDropdown } from "@/components/layout/MegaMenu";
-import { homeMenu, productsMenu } from "@/components/layout/menuConfig";
+import { productsMenu } from "@/components/layout/menuConfig";
 
 export default function Topbar() {
   return (
@@ -62,10 +62,15 @@ export default function Topbar() {
 
             {/* Nav */}
             <nav className="hidden md:flex items-center gap-1">
-              <NavDropdown label="Home"     menu={homeMenu} />
               <NavDropdown label="Products" menu={productsMenu} />
               <button className="px-4 py-2.5 text-[13px] font-bold text-gray-700 hover:bg-gray-50 hover:text-[#2ecc40] rounded-lg transition-all uppercase tracking-[0.05em]">
+                Why Us
+              </button>
+              <button className="px-4 py-2.5 text-[13px] font-bold text-gray-700 hover:bg-gray-50 hover:text-[#2ecc40] rounded-lg transition-all uppercase tracking-[0.05em]">
                 Contact
+              </button>              
+              <button className="px-4 py-2.5 text-[13px] font-bold text-gray-700 hover:bg-gray-50 hover:text-[#2ecc40] rounded-lg transition-all uppercase tracking-[0.05em]">
+                Energy Calculator
               </button>
             </nav>
 

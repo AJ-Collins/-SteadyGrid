@@ -3,19 +3,6 @@
 import { useState } from "react";
 import { Search, ChevronDown, Truck, RefreshCcw, ShieldCheck } from "lucide-react";
 
-const CATEGORIES = [
-  "All Categories",
-  "Laptops",
-  "PC & Computers",
-  "Cell Phones",
-  "Tablets",
-  "Gaming & VR",
-  "Cameras",
-  "Sounds",
-  "Storage, USB",
-  "Accessories",
-];
-
 const PERKS = [
   { icon: <Truck size={15} />,       label: "FREE SHIPPING OVER $199" },
   { icon: <RefreshCcw size={15} />,  label: "30 DAYS MONEY BACK"      },
@@ -33,37 +20,6 @@ export function SearchBar() {
 
         {/* Search input */}
         <div className="flex-1 max-w-[560px] bg-white rounded-full flex items-center overflow-visible relative h-11">
-
-          {/* Category dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setDropOpen((v) => !v)}
-              className="flex items-center gap-1.5 pl-4 pr-3 h-11 text-[14px] font-semibold text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap border-r border-gray-200 cursor-pointer rounded-l-full bg-transparent"
-            >
-              {category}
-              <ChevronDown
-                size={13}
-                className={`text-gray-400 transition-transform duration-200 ${dropOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-
-            {dropOpen && (
-              <div className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl border border-gray-100 z-50 py-1 min-w-[180px]">
-                {CATEGORIES.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => { setCategory(cat); setDropOpen(false); }}
-                    className={`w-full text-left px-4 py-2 text-[14px] transition-colors cursor-pointer hover:bg-[#2ecc40]/5 hover:text-[#2ecc40] ${
-                      cat === category ? "font-bold text-[#2ecc40]" : "text-gray-600 font-medium"
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
           {/* Text input */}
           <input
             type="text"

@@ -75,9 +75,9 @@ interface ProductSliderProps {
   visibleCount?: number;
 }
 
-export function BestSellerProducts({
-  title = "Best Seller Products",
-  subtitle = "Our most popular picks",
+export function TopRatedProducts({
+  title = "Top Rated Products",
+  subtitle = "Our customers' favorites",
   products = DEFAULT_PRODUCTS,
   viewAllHref = "#",
   visibleCount = 5,
@@ -101,7 +101,7 @@ export function BestSellerProducts({
   };
 
   return (
-    <div className="max-w-[1400px] mx-auto px-2 py-5 bg-white rounded-lg shadow-sm border border-gray-100 mt-4">
+    <div className="max-w-[1400px] mx-auto px-2 py-5 bg-white rounded-lg shadow-sm border border-gray-100">
       
       {/* Header */}
       <div className="flex items-end justify-between mb-4">

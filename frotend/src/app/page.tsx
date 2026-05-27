@@ -1,9 +1,11 @@
 import { SearchBar } from "@/components/layout/SearchBar";
 import Hero from "@/components/storefront/Hero";
-import { BestSellerProduct } from "@/components/storefront/BestSellerProduct";
 import Topbar from "@/components/storefront/Topbar";
 import { BrandsAndCategories } from "@/components/storefront/BrandsAndCategories";
 import { FeaturedProduct } from "@/components/storefront/FeaturedProduct";
+import { TopRatedProducts } from "@/components/storefront/TopRatedProducts";
+import { BestSellerProducts } from "@/components/storefront/BestSellerProduct";
+import { ProductCategory } from "@/components/storefront/ProductCategory";
 
 
 export default function Home() {
@@ -14,7 +16,10 @@ export default function Home() {
       <Hero />
       <BrandsAndCategories />
       <FeaturedProduct />
-      <BestSellerProduct/>
+      <TopRatedProducts />
+      <BestSellerProducts />
+      <ProductCategory />
+      <ProductCategory />
     </main>
   );
 }

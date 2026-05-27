@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 export interface TopCategory {
   name: string;
@@ -16,14 +16,14 @@ interface TopCategoriesProps {
 }
 
 const DEFAULT_CATEGORIES: TopCategory[] = [
-  { name: "Laptops",     image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=300&auto=format&fit=crop" },
-  { name: "PC Gaming",   image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?q=80&w=300&auto=format&fit=crop" },
-  { name: "Headphones",  image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=300&auto=format&fit=crop" },
-  { name: "Monitors",    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=300&auto=format&fit=crop" },
-  { name: "Keyboards",   image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=300&auto=format&fit=crop" },
-  { name: "Cameras",     image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=300&auto=format&fit=crop" },
-  { name: "Tablets",     image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" },
-  { name: "Phones",      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=300&auto=format&fit=crop" },
+  { name: "Laptops",     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmoMT3OBIGBONfzWkJjOKPDgKxinPkAMYi9w&s" },
+  { name: "PC Gaming",   image: "https://image.made-in-china.com/202f0j00jqBcwgVJkpbf/Renewable-Energy-Solar-Power-500kw-500kVA-1-MW-on-Grid-PV-Solar-System-for-Commercial-Rooftop.webp" },
+  { name: "Headphones",  image: "https://hpsenergy.eu/wp-content/uploads/2024/09/kf-S4ed2d1dc91834e6ba4d9cb2f7203616eD-300x300.webp" },
+  { name: "Monitors",    image: "https://image.made-in-china.com/2f0j00qbCciegBkrow/5-Kw-off-Grid-Solar-Power-System-with-Battery-and-Inverter-for-Solar-Home-Complete-System-with-Electricity-Power.webp" },
+  { name: "Keyboards",   image: "https://image.made-in-china.com/202f0j00jZTkcIFKkvbu/Factory-10000W-Solar-Panel-Kit-3kw-5kw-6kw-8kw-Complete-on-Grid-Solar-System-for-Home-off-Grid-Solar-Energy-Sys.webp" },
+  { name: "Cameras",     image: "https://voltaconsolar.com/cdn/shop/files/voltacon-off-grid-solar-kit-36kw-inverter-mppt-charger-solar-panels-gel-battery-133974.jpg?v=1747943244" },
+  { name: "Tablets",     image: "https://image.made-in-china.com/2f0j00YPoRMwmhkAcI/5kVA-Korean-Solar-Panels-for-Mini-Solar-Power-System.webp" },
+  { name: "Phones",      image: "https://m.media-amazon.com/images/I/61eiCJBYW1L.jpg"},
 ];
 
 export function TopCategories({
@@ -44,14 +44,14 @@ export function TopCategories({
 
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-[15px] font-black text-gray-900 uppercase tracking-wider">
+        <h1 className="text-[18px] font-black text-gray-900 uppercase tracking-wider">
           Top Categories
-        </h2>
+        </h1>
         <a
           href={viewAllHref}
-          className="text-[12.5px] font-semibold text-gray-400 hover:text-[#2ecc40] transition-colors"
-        >
-          View All
+          className="text-sm font-semibold text-gray-500 hover:text-[#2ecc40] transition-colors flex items-center gap-1"
+          >
+            See All <ArrowRight size={14} />
         </a>
       </div>
 
@@ -88,13 +88,17 @@ export function TopCategories({
               href={cat.href ?? "#"}
               className="flex-1 flex flex-col items-center gap-3 group/tile"
             >
-              <div className="w-full aspect-square max-h-[110px] rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-300 group-hover/tile:shadow-md">
+              {/* Animated box (NOT image) */}
+              <div className="w-full aspect-square max-h-[110px] rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-500 group-hover/tile:shadow-lg group-hover/tile:scale-105 bg-gray-50">
+                
+                {/* Image is now static */}
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  className="w-full h-full object-cover group-hover/tile:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain p-1"
                 />
               </div>
+
               <span className="text-[13px] font-bold text-gray-700 group-hover/tile:text-[#2ecc40] transition-colors text-center leading-tight">
                 {cat.name}
               </span>

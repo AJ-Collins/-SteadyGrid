@@ -15,19 +15,18 @@ interface CategorySideNavProps {
 }
 
 const DEFAULT_CATEGORIES: SideNavCategory[] = [
-  { label: "SALE 40% OFF", highlight: true },
-  { label: "Laptops" },
-  { label: "PC & Computers" },
-  { label: "Cell Phones" },
-  { label: "Tablets" },
-  { label: "Gaming & VR" },
-  { label: "Networking" },
-  { label: "Cameras" },
-  { label: "Sounds" },
-  { label: "Office" },
-  { label: "Storage, USB" },
-  { label: "Accessories" },
-  { label: "Clearance" },
+  { label: "Solar Deals", highlight: true },
+  { label: "Portable Power Stations" },
+  { label: "Backup Power Systems" },
+  { label: "Solar Home Kits" },
+  { label: "Solar Panels" },
+  { label: "Hybrid Inverters" },
+  { label: "Battery Storage" },
+  { label: "Charge Controllers" },
+  { label: "Installation Services" },
+  { label: "Solar Cables" },
+  { label: "Surge Protectors" },
+  { label: "Power Accessories" },
 ];
 
 export function CategorySideNav({ categories = DEFAULT_CATEGORIES }: Partial<CategorySideNavProps>) {

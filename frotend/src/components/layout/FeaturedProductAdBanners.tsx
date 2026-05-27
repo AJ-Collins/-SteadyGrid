@@ -24,7 +24,7 @@ const DEFAULT_BANNERS: AdBanner[] = [
     badgeText: "text-white",
     title: "SALE",
     subtitle: "GAME",
-    image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=600&auto=format&fit=crop",
+    image: "https://image.made-in-china.com/202f0j00mspklJnIwvqf/Hybrid-Grid-Portable-PV-Solar-Power-Home-Lighting-Panel-System-5kw-10kw-20kw-with-12V-100ah-Lithium-Battery.jpg",
     href: "#",
     bgColor: "bg-gray-100",
     dark: false,
@@ -33,9 +33,9 @@ const DEFAULT_BANNERS: AdBanner[] = [
     badge: "",
     badgeBg: "bg-[#2ecc40]",
     badgeText: "text-white",
-    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=600&auto=format&fit=crop",
+    image: "https://www.namkoosolar.com/uploadfile/2022/10/10/202210101538148108.jpg",
     href: "#",
-    bgColor: "bg-gray-800",
+    bgColor: "bg-gray-100",
     dark: true,
   },
 ];
@@ -47,35 +47,34 @@ export function FeaturedProductAdBanners({ banners = DEFAULT_BANNERS }: SideAdBa
         <a
           key={i}
           href={banner.href ?? "#"}
-          className={`relative flex-1 min-h-[168px] rounded-2xl overflow-hidden group cursor-pointer border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${banner.bgColor ?? "bg-gray-100"}`}
+          className={`relative flex-1 min-h-[168px] rounded-2xl overflow-hidden group cursor-pointer border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white`}
         >
-          {/* Full-bleed background image */}
+          {/* IMAGE ONLY (no overlay, no effects blocking it) */}
           <img
             src={banner.image}
             alt={banner.imageAlt ?? banner.title ?? ""}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
-          {/* Overlay */}
-          <div className={`absolute inset-0 ${banner.dark ? "bg-black/40" : "bg-white/10"} transition-colors group-hover:bg-black/20`} />
-
-          {/* Badge */}
+          {/* Badge (floating only, no interference with image) */}
           {banner.badge && (
-            <div className={`absolute top-3 right-3 z-10 ${banner.badgeBg ?? "bg-black"} ${banner.badgeText ?? "text-white"} text-[13px] font-black px-2.5 py-1 rounded-lg shadow-md`}>
+            <div
+              className={`absolute top-3 right-3 z-10 text-[13px] font-black px-2.5 py-1 rounded-lg shadow-md ${banner.badgeBg ?? "bg-black"} ${banner.badgeText ?? "text-white"}`}
+            >
               {banner.badge}
             </div>
           )}
 
-          {/* Text overlay */}
+          {/* Text overlay (optional but still non-obstructive) */}
           {(banner.title || banner.subtitle) && (
-            <div className="absolute inset-0 z-10 flex flex-col justify-center px-5">
+            <div className="absolute inset-0 z-10 flex flex-col justify-center px-5 pointer-events-none">
               {banner.title && (
-                <span className={`text-[28px] font-black leading-tight tracking-tight ${banner.dark ? "text-white" : "text-gray-900"}`} style={{ textShadow: banner.dark ? "0 2px 8px rgba(0,0,0,0.5)" : "none" }}>
+                <span className="text-[28px] font-black leading-tight text-white drop-shadow-lg">
                   {banner.title}
                 </span>
               )}
               {banner.subtitle && (
-                <span className={`text-[22px] font-black leading-tight ${banner.dark ? "text-white/80" : "text-gray-700"}`}>
+                <span className="text-[22px] font-black leading-tight text-white/90 drop-shadow-md">
                   {banner.subtitle}
                 </span>
               )}

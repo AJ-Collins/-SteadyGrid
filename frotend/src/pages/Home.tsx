@@ -1,20 +1,30 @@
-import Navbar from "../components/layout/Navbar";
-import HeroSection from "../components/home/HeroSection";
-import StatsBar from "../components/home/StatsBar";
-import SolutionsSection from "../components/home/SolutionSection";
-import ShowcaseBanner from "../components/home/ShowcaseBanner";
-import Footer from "../components/layout/Footer";
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+import Hero from '../components/home/Hero';
+import Partners from '../components/home/Partners';
+import SolutionsGrid from '../components/home/SolutionsGrid';
+import TrustedService from '../components/home/TrustedService';
+import CaseStudy from '../components/home/CaseStudy';
+import Products from '../components/home/Products';
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ background: "var(--background)", fontFamily: "var(--sans)" }}>
+    <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-surface-highest">
       <Navbar />
+
       <main>
-        <HeroSection />
-        <StatsBar />
-        <SolutionsSection />
-        <ShowcaseBanner />
+        <Hero />
+        <Products />
+        <Partners />
+        <SolutionsGrid />
+
+        <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 pb-16">
+          <TrustedService />
+        </div>
+
+        <CaseStudy />
       </main>
+
       <Footer />
     </div>
   );

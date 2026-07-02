@@ -13,7 +13,7 @@ export default function ShopByProject() {
       id: 'mounting-solutions',
       title: 'Mounting Solutions',
       description: 'Secure your solar investment with durable, high-quality solar panel mounting solutions built for every installation type and solar project. Take a look at these reliable products for solar mounting.',
-      image: 'https://images.unsplash.com/photo-1620038650444-9b62ef757041?auto=format&fit=crop&w=800&q=80',
+      image: 'https://checkout.bluettipower.com/cdn/shop/files/7-PC_2x_00cd6597-414a-4dd6-a641-2d717578e4ee.png?v=1774922316&width=800',
       href: '/shop/mounting',
     },
     {
@@ -27,21 +27,21 @@ export default function ShopByProject() {
       id: 'survival-preparedness',
       title: 'Survival Preparedness',
       description: 'Be ready for anything with solar-powered preparedness kits designed to keep your important devices and systems running. Discover these popular solar products to stay prepared.',
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80',
+      image: 'https://checkout.bluettipower.com/cdn/shop/files/What_Can_I_Run_With_A_2_000-Watt_Generator.webp?v=1743409092&width=1200',
       href: '/shop/survival',
     },
     {
       id: 'mobile-adventures',
       title: 'Mobile Adventures',
       description: 'Ideal for solar for RVs, vans, and tiny homes—take solar power on the road and keep your space energized anywhere your journey leads. Explore these popular products for mobile solar projects.',
-      image: 'https://images.unsplash.com/photo-1525113990974-3f4e24eaa39b?auto=format&fit=crop&w=800&q=80',
+      image: 'https://checkout.bluettipower.com/cdn/shop/files/lQDPKGWqUUkw-X3NCHDNDwCw7e5zqwZZrrUIuAa-ga2IAg_3840_2160_1x_f70730dd-c5cf-4f2c-a680-b70cc4c65d36.png?v=1772592026&width=1200',
       href: '/shop/mobile',
     },
     {
       id: 'battery-backup',
       title: 'Battery Backup',
       description: 'Ensure peace of mind during outages with backup systems built to keep your essentials powered without interruption. Check out these popular products that will keep you prepared.',
-      image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+      image: 'https://checkout.bluettipower.com/cdn/shop/files/AC300_B300K_home_backup_use_pc_76ee7e83-ef3f-4a5c-891b-23c81cdf1525.jpg?v=1743418693&width=1200',
       href: '/shop/backup',
     },
   ];

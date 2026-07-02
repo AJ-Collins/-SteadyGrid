@@ -21,7 +21,7 @@ export default function BrandHighlight() {
       badge: 'MOUNTING SOLUTIONS',
       title: 'Smarter Mounting. Faster Installs.',
       description: 'Pegasus Solar delivers next-level roof-mounting solutions for residential and commercial installs, with installer-friendly hardware designed to simplify workflows, reduce material use, and support long-term performance.',
-      image: 'https://images.unsplash.com/photo-1620038650444-9b62ef757041?auto=format&fit=crop&w=1920&q=80',
+      image: 'https://checkout.bluettipower.com/cdn/shop/files/4_0c2307c5-6916-4976-826b-668bb440fe66.png?v=1775555594&width=1600',
     },
     {
       id: 'sirius',
@@ -135,52 +135,52 @@ export default function BrandHighlight() {
 
               {/* Background Image & Overlay */}
               <div className="absolute inset-0 z-0">
-                <img 
-                  src={slide.image} 
-                  alt={slide.title} 
+                <img
+                  src={slide.image}
+                  alt={slide.title}
                   className="w-full h-full object-cover"
                   draggable="false"
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
               </div>
 
-            {/* Content Container */}
-            <div className="relative z-10 max-w-[900px] mx-auto flex flex-col items-center text-center mt-8">
-              {/* Logo */}
-              <div className="mb-6">
-                {slide.logo}
-              </div>
+              {/* Content Container */}
+              <div className="relative z-10 max-w-[900px] mx-auto flex flex-col items-center text-center mt-8">
+                {/* Logo */}
+                <div className="mb-6">
+                  {slide.logo}
+                </div>
 
-              {/* White Pill Badge */}
-              <div className="bg-white px-3 py-1 mb-5 rounded-sm">
-                <span className="text-[10px] font-bold text-neutral-900 tracking-[0.1em] uppercase">
-                  {slide.badge}
-                </span>
-              </div>
+                {/* White Pill Badge */}
+                <div className="bg-white px-3 py-1 mb-5 rounded-sm">
+                  <span className="text-[10px] font-bold text-neutral-900 tracking-[0.1em] uppercase">
+                    {slide.badge}
+                  </span>
+                </div>
 
-              {/* Title */}
-              <h2 className="text-3xl sm:text-4xl md:text-[44px] font-bold text-white mb-5 tracking-tight leading-tight">
-                {slide.title}
-              </h2>
+                {/* Title */}
+                <h2 className="text-3xl sm:text-4xl md:text-[44px] font-bold text-white mb-5 tracking-tight leading-tight">
+                  {slide.title}
+                </h2>
 
-              {/* Description */}
-              <p className="text-[14px] sm:text-[16px] text-neutral-200 mb-8 leading-relaxed max-w-4xl">
-                {slide.description}
-              </p>
+                {/* Description */}
+                <p className="text-[14px] sm:text-[16px] text-neutral-200 mb-8 leading-relaxed max-w-4xl">
+                  {slide.description}
+                </p>
 
-              {/* Links & Buttons */}
-              <div className="flex flex-col items-center gap-5">
-                <a href="#" className="text-white font-bold text-[14px] hover:underline underline-offset-4">
-                  Learn More &gt;
-                </a>
-                <button className="bg-white hover:bg-neutral-100 text-neutral-900 font-bold text-[15px] px-8 py-3 rounded-md shadow-lg transition-colors">
-                  Shop Now
-                </button>
+                {/* Links & Buttons */}
+                <div className="flex flex-col items-center gap-5">
+                  <a href="#" className="text-white font-bold text-[14px] hover:underline underline-offset-4">
+                    Learn More &gt;
+                  </a>
+                  <button className="bg-white hover:bg-neutral-100 text-neutral-900 font-bold text-[15px] px-8 py-3 rounded-md shadow-lg transition-colors">
+                    Shop Now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
         {/* Pagination Dots */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">

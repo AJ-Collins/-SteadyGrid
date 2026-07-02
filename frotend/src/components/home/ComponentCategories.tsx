@@ -24,7 +24,7 @@ const categories: ComponentCategory[] = [
   },
   {
     name: 'Batteries',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80',
+    image: 'https://cdn.shopify.com/s/files/1/0536/3390/8911/files/Apex_300_2_200W_SP200L_1.webp?v=1781056025&width=1125&height=1125&crop=center',
     href: '/shop/batteries',
   },
   {

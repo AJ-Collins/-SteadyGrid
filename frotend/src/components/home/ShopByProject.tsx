@@ -1,0 +1,96 @@
+import { Link } from 'react-router-dom';
+
+export default function ShopByProject() {
+  const options = [
+    {
+      id: 'homesteading',
+      title: 'Homesteading',
+      description: 'Empower your off-grid lifestyle with reliable solar power systems for homesteads, built for energy independence. Browse these popular products for homesteading projects.',
+      image: 'https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/homesteading-4-2026.png?t=1777412401',
+      href: '/shop/homesteading',
+    },
+    {
+      id: 'mounting-solutions',
+      title: 'Mounting Solutions',
+      description: 'Secure your solar investment with durable, high-quality solar panel mounting solutions built for every installation type and solar project. Take a look at these reliable products for solar mounting.',
+      image: 'https://images.unsplash.com/photo-1620038650444-9b62ef757041?auto=format&fit=crop&w=800&q=80',
+      href: '/shop/mounting',
+    },
+    {
+      id: 'ev-charging',
+      title: 'EV Charging',
+      description: 'Power your electric vehicle with efficient solar EV charging stations, designed for convenience at home or in remote locations. View these popular products for EV charging projects.',
+      image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80',
+      href: '/shop/ev-charging',
+    },
+    {
+      id: 'survival-preparedness',
+      title: 'Survival Preparedness',
+      description: 'Be ready for anything with solar-powered preparedness kits designed to keep your important devices and systems running. Discover these popular solar products to stay prepared.',
+      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80',
+      href: '/shop/survival',
+    },
+    {
+      id: 'mobile-adventures',
+      title: 'Mobile Adventures',
+      description: 'Ideal for solar for RVs, vans, and tiny homes—take solar power on the road and keep your space energized anywhere your journey leads. Explore these popular products for mobile solar projects.',
+      image: 'https://images.unsplash.com/photo-1525113990974-3f4e24eaa39b?auto=format&fit=crop&w=800&q=80',
+      href: '/shop/mobile',
+    },
+    {
+      id: 'battery-backup',
+      title: 'Battery Backup',
+      description: 'Ensure peace of mind during outages with backup systems built to keep your essentials powered without interruption. Check out these popular products that will keep you prepared.',
+      image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+      href: '/shop/backup',
+    },
+  ];
+
+  return (
+    <section className="w-full bg-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-100">
+      <div className="max-w-[1400px] mx-auto">
+
+        {/* Section Header */}
+        <div className="flex flex-col mb-8 sm:mb-10">
+          <h2 className="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight uppercase flex items-center gap-2.5">
+            <span className="w-1.5 h-6 sm:h-7 bg-[#fbbf24] block rounded-sm shrink-0"></span>
+            Shop By Project
+          </h2>
+          <p className="text-neutral-500 text-[11px] sm:text-xs font-semibold tracking-wide uppercase mt-1 pl-4">
+            Find the perfect solar setup tailored to your specific application
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 sm:gap-y-12">
+          {options.map((opt) => (
+            <div key={opt.id} className="flex flex-col group">
+              <div className="w-full aspect-[16/9] overflow-hidden bg-neutral-100 mb-4 sm:mb-5">
+                <img
+                  src={opt.image}
+                  alt={opt.title}
+                  className="w-full h-full object-cover hover:cursor-pointer"
+                />
+              </div>
+              <div className="flex flex-col flex-1 px-1">
+                <h3 className="text-lg sm:text-[19px] font-bold text-neutral-900 mb-2 leading-tight hover:cursor-pointer">
+                  {opt.title}
+                </h3>
+                <p className="text-[13px] sm:text-[13px] text-neutral-600 leading-relaxed mb-5 flex-1 pr-4">
+                  {opt.description}
+                </p>
+                <div className="mt-auto">
+                  <Link
+                    to={opt.href}
+                    className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[13px] font-medium px-5 sm:px-6 py-2.5 transition-colors"
+                  >
+                    Discover More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

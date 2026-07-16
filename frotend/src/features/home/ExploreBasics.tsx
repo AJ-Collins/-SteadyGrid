@@ -35,7 +35,7 @@ export default function ExploreBasics() {
 
           {/* Left Content */}
           <div className="w-full lg:w-1/3 flex flex-col items-center text-center shrink-0">
-            <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] xl:text-[44px] font-black text-neutral-900 tracking-tight mb-3">
+            <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] xl:text-[44px] font-black text-[#0B1525] tracking-tight mb-3">
               Explore The Basics
             </h2>
             <p className="text-[14px] sm:text-[15px] text-neutral-700 leading-relaxed mb-6 max-w-[280px]">
@@ -43,7 +43,7 @@ export default function ExploreBasics() {
             </p>
             <Link
               to="/learn"
-              className="inline-flex items-center justify-center bg-[#fbbf24] hover:bg-[#f59e0b] text-neutral-900 text-[14px] font-bold px-7 py-2.5 rounded shadow-sm transition-colors"
+              className="inline-flex items-center justify-center bg-[#22a055] hover:bg-[#187a3e] text-white text-[14px] font-bold px-7 py-2.5 rounded shadow-sm transition-colors"
             >
               Learn More
             </Link>
@@ -60,10 +60,10 @@ export default function ExploreBasics() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-[13px] sm:text-[14px] font-black text-neutral-900 text-center mb-1.5">
+                <h3 className="text-[13px] sm:text-[14px] font-black text-[#0B1525] text-center mb-1.5">
                   {item.title}
                 </h3>
-                <span className="text-[11px] sm:text-[12px] text-neutral-600 text-center flex items-center justify-center gap-1 group-hover:text-neutral-900 transition-colors">
+                <span className="text-[11px] sm:text-[12px] text-neutral-600 text-center flex items-center justify-center gap-1 group-hover:text-[#0B1525] transition-colors">
                   Read More <span className="text-[10px] font-medium">&gt;</span>
                 </span>
               </Link>

@@ -27,7 +27,7 @@ export default function TrustBadges() {
       <div className="max-w-[1400px] mx-auto flex flex-col items-center">
 
         <div className="text-center mb-10 sm:mb-12">
-          <h2 className="text-2xl sm:text-[28px] font-bold text-neutral-900 mb-3 tracking-tight">
+          <h2 className="text-2xl sm:text-[28px] font-bold text-[#0B1525] mb-3 tracking-tight">
             The SteadyGrid Difference
           </h2>
           <p className="text-[14px] sm:text-[15px] text-neutral-600 max-w-2xl mx-auto">
@@ -42,13 +42,13 @@ export default function TrustBadges() {
               className="flex flex-col items-center text-center px-6 py-10 sm:px-10 sm:py-12 bg-[#f8f9fa] rounded-2xl"
             >
               {badge.icon}
-              <h3 className="text-lg sm:text-[19px] font-bold text-neutral-900 mb-3 whitespace-pre-line leading-snug">
+              <h3 className="text-lg sm:text-[19px] font-bold text-[#0B1525] mb-3 whitespace-pre-line leading-snug">
                 {badge.title}
               </h3>
               <p className="text-[13px] sm:text-[14px] text-neutral-600 leading-relaxed mb-8 flex-1 px-2">
                 {badge.description}
               </p>
-              <button className="bg-[#fbbf24] hover:bg-[#f59e0b] text-neutral-900 font-bold text-[13px] px-8 py-2.5 rounded-md shadow-sm transition-colors mt-auto">
+              <button className="bg-[#22a055] hover:bg-[#187a3e] text-white font-bold text-[13px] px-8 py-2.5 rounded-md shadow-sm transition-colors mt-auto">
                 {badge.buttonText}
               </button>
             </div>

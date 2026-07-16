@@ -100,16 +100,16 @@ export default function TopSellers() {
         {/* Section Header with Navigation Arrows */}
         <div className="flex items-end justify-between mb-5 border-b border-neutral-200 pb-3 gap-4">
           <div className="min-w-0 pr-2">
-            <h2 className="text-sm sm:text-lg font-black text-neutral-900 tracking-tight uppercase flex items-center gap-2">
-              <span className="w-1.5 h-4 sm:h-5 bg-[#fbbf24] block rounded-sm shrink-0"></span>
-              <span className="truncate">Top Sellers Right Now</span>
+            <h2 className="text-sm sm:text-lg font-black text-[#0B1525] tracking-tight uppercase flex items-center gap-2">
+              <span className="w-1.5 h-4 sm:h-5 bg-[#22a055] block rounded-sm shrink-0"></span>
+              <span className="leading-tight">Top Sellers Right Now</span>
             </h2>
             <p className="text-neutral-400 text-[10px] sm:text-[11px] font-semibold tracking-wide uppercase mt-0.5">
               Our most popular products, in stock and ready to ship
             </p>
           </div>
 
-          <a href="#" className="shrink-0 whitespace-nowrap flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-[11px] font-black tracking-widest text-neutral-400 hover:text-neutral-900 uppercase transition-colors group/link mb-1">
+          <a href="#" className="shrink-0 whitespace-nowrap flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-[11px] font-black tracking-widest text-neutral-400 hover:text-[#0B1525] uppercase transition-colors group/link mb-1">
             <span>VIEW MORE</span>
             <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover/link:translate-x-1 transition-transform" />
           </a>
@@ -143,7 +143,7 @@ export default function TopSellers() {
                     className="w-full h-full object-contain"
                   />
                   {product.inStock && (
-                    <span className="absolute top-1.5 left-1.5 bg-neutral-900 text-[#fbbf24] text-[8px] font-black tracking-widest px-1.5 py-0.5 rounded uppercase">
+                    <span className="absolute top-1 left-1 bg-[#22a055] text-white text-[8px] font-black tracking-widest px-1.5 py-0.5 uppercase">
                       IN STOCK
                     </span>
                   )}
@@ -154,11 +154,11 @@ export default function TopSellers() {
                   <span className="text-[10px] text-neutral-400 uppercase tracking-wider mb-1.5 font-bold">
                     {product.category}
                   </span>
-                  <h3 className="text-[12px] sm:text-[13px] text-neutral-800 font-medium leading-snug mb-2 hover:text-[#fbbf24] transition-colors line-clamp-2 min-h-[36px]">
+                  <h3 className="text-[12px] sm:text-[13px] text-neutral-800 font-medium leading-snug mb-2 hover:text-[#22a055] transition-colors line-clamp-2 min-h-[36px]">
                     {product.name}
                   </h3>
                   <div className="flex items-baseline justify-center gap-1.5 mt-1">
-                    <span className="text-[13px] font-black text-neutral-900">
+                    <span className="text-[13px] font-black text-[#0B1525]">
                       {product.price}
                     </span>
                     {product.wasPrice && (

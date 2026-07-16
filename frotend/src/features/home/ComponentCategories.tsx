@@ -64,7 +64,7 @@ export default function ComponentCategories() {
     <section className="w-full bg-white py-8 sm:py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1400px] mx-auto">
         {/* Section Title – left-aligned */}
-        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight mb-5">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#0B1525] tracking-tight mb-5">
           Top Categories
         </h2>
 
@@ -87,7 +87,7 @@ export default function ComponentCategories() {
               </div>
 
               {/* Category label */}
-              <span className="text-xs sm:text-sm text-neutral-700 font-medium text-center leading-tight group-hover:text-neutral-900 transition-colors">
+              <span className="text-xs sm:text-sm text-neutral-700 font-medium text-center leading-tight group-hover:text-[#0B1525] transition-colors">
                 {cat.name}
               </span>
             </Link>

@@ -62,7 +62,7 @@ export default function BrandLogos() {
             <div className="w-[18px] h-[18px] rounded-full border-[3px] border-[#1b4e8c] bg-gradient-to-br from-yellow-300 to-orange-500 mx-[1px]"></div>
             <span className="text-[22px] font-black text-[#1b4e8c]">USA</span>
           </div>
-          <span className="text-[7px] font-bold tracking-[0.15em] text-[#f59e0b] mt-0.5">
+          <span className="text-[7px] font-bold tracking-[0.15em] text-[#187a3e] mt-0.5">
             SOLAR RACKING SOLUTIONS
           </span>
         </div>

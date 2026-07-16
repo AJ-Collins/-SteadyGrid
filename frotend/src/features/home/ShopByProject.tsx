@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import ShopByProjectCard from '../projects/ShopByProjectCard';
 
 export default function ShopByProject() {
-  const options = [
+  const projects = [
     {
       id: 'homesteading',
       title: 'Homesteading',
@@ -52,8 +52,8 @@ export default function ShopByProject() {
 
         {/* Section Header */}
         <div className="flex flex-col mb-8 sm:mb-10">
-          <h2 className="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight uppercase flex items-center gap-2.5">
-            <span className="w-1.5 h-6 sm:h-7 bg-[#fbbf24] block rounded-sm shrink-0"></span>
+          <h2 className="text-xl sm:text-2xl font-black text-[#0B1525] tracking-tight uppercase flex items-center gap-2.5">
+            <span className="w-1.5 h-6 sm:h-7 bg-[#22a055] block rounded-sm shrink-0"></span>
             Shop By Project
           </h2>
           <p className="text-neutral-500 text-[11px] sm:text-xs font-semibold tracking-wide uppercase mt-1 pl-4">
@@ -62,32 +62,8 @@ export default function ShopByProject() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 sm:gap-y-12">
-          {options.map((opt) => (
-            <div key={opt.id} className="flex flex-col group">
-              <div className="w-full aspect-[16/9] overflow-hidden bg-neutral-100 mb-4 sm:mb-5">
-                <img
-                  src={opt.image}
-                  alt={opt.title}
-                  className="w-full h-full object-cover hover:cursor-pointer"
-                />
-              </div>
-              <div className="flex flex-col flex-1 px-1">
-                <h3 className="text-lg sm:text-[19px] font-bold text-neutral-900 mb-2 leading-tight hover:cursor-pointer">
-                  {opt.title}
-                </h3>
-                <p className="text-[13px] sm:text-[13px] text-neutral-600 leading-relaxed mb-5 flex-1 pr-4">
-                  {opt.description}
-                </p>
-                <div className="mt-auto">
-                  <Link
-                    to={opt.href}
-                    className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[13px] font-medium px-5 sm:px-6 py-2.5 transition-colors"
-                  >
-                    Discover More
-                  </Link>
-                </div>
-              </div>
-            </div>
+          {projects.map(project => (
+            <ShopByProjectCard key={project.id} {...project} />
           ))}
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function Hero() {
         {/* ═══════════════════════════════════════════
             Top Hero Carousel
         ═══════════════════════════════════════════ */}
-        <div className="w-full relative h-[450px] sm:h-[500px] lg:h-[550px] sm:rounded-t-lg overflow-hidden group bg-neutral-950">
+        <div className="w-full relative h-[450px] sm:h-[500px] lg:h-[550px] sm:rounded-t-lg overflow-hidden group bg-[#0a101d]">
           {/* Slides */}
           {slides.map((s, i) => (
             <div
@@ -90,7 +90,7 @@ export default function Hero() {
             </p>
             <Link
               to={slide.link}
-              className="inline-flex items-center gap-2 bg-[#fbbf24] hover:bg-yellow-400 text-black font-extrabold py-3.5 px-8 rounded text-[13px] tracking-wider uppercase transition-all shadow-lg w-fit"
+              className="inline-flex items-center gap-2 bg-[#22a055] hover:bg-[#187a3e] text-white font-extrabold py-3.5 px-8 rounded text-[13px] tracking-wider uppercase transition-all shadow-lg w-fit"
             >
               {slide.cta}
             </Link>
@@ -116,10 +116,10 @@ export default function Hero() {
         {/* ═══════════════════════════════════════════
             Stats Ribbon
         ═══════════════════════════════════════════ */}
-        <div className="w-full bg-[#1a1a1a] sm:rounded-b-lg overflow-hidden grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-neutral-800 shadow-md">
+        <div className="w-full bg-[#0B1525] sm:rounded-b-lg overflow-hidden grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-neutral-800 shadow-md">
 
-          <div className="flex flex-col items-center justify-center p-6 sm:p-8 text-center group hover:bg-neutral-900 transition-colors">
-            <span className="text-[#fbbf24] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center p-4 sm:p-5 text-center group hover:bg-[#0B1525] transition-colors">
+            <span className="text-[#22a055] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
               10+
             </span>
             <span className="text-neutral-300 text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em]">
@@ -127,8 +127,8 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="flex flex-col items-center justify-center p-6 sm:p-8 text-center group hover:bg-neutral-900 transition-colors">
-            <span className="text-[#fbbf24] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center p-4 sm:p-5 text-center group hover:bg-[#0B1525] transition-colors">
+            <span className="text-[#22a055] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
               1+ MW
             </span>
             <span className="text-neutral-300 text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em]">
@@ -136,8 +136,8 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="flex flex-col items-center justify-center p-6 sm:p-8 text-center group hover:bg-neutral-900 transition-colors">
-            <span className="text-[#fbbf24] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center p-4 sm:p-5 text-center group hover:bg-[#0B1525] transition-colors">
+            <span className="text-[#22a055] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
               99%
             </span>
             <span className="text-neutral-300 text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em]">
@@ -145,8 +145,8 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="flex flex-col items-center justify-center p-6 sm:p-8 text-center group hover:bg-neutral-900 transition-colors">
-            <span className="text-[#fbbf24] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center p-4 sm:p-5 text-center group hover:bg-[#0B1525] transition-colors">
+            <span className="text-[#22a055] text-3xl sm:text-4xl font-black tracking-tight mb-2 group-hover:scale-110 transition-transform duration-300">
               100%
             </span>
             <span className="text-neutral-300 text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em]">

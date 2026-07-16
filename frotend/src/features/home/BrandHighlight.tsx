@@ -111,14 +111,14 @@ export default function BrandHighlight() {
         {/* Navigation Arrows */}
         <button
           onClick={() => scroll('left')}
-          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center text-neutral-900 hover:scale-105 transition-transform opacity-0 group-hover/banner:opacity-100 shadow-lg cursor-pointer"
+          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#0B1525] hover:scale-105 transition-transform opacity-0 group-hover/banner:opacity-100 shadow-lg cursor-pointer"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={() => scroll('right')}
-          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center text-neutral-900 hover:scale-105 transition-transform opacity-0 group-hover/banner:opacity-100 shadow-lg cursor-pointer"
+          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#0B1525] hover:scale-105 transition-transform opacity-0 group-hover/banner:opacity-100 shadow-lg cursor-pointer"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6" />
@@ -141,7 +141,7 @@ export default function BrandHighlight() {
                   className="w-full h-full object-cover"
                   draggable="false"
                 />
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-[#0a101d]/40"></div>
               </div>
 
               {/* Content Container */}
@@ -153,7 +153,7 @@ export default function BrandHighlight() {
 
                 {/* White Pill Badge */}
                 <div className="bg-white px-3 py-1 mb-5 rounded-sm">
-                  <span className="text-[10px] font-bold text-neutral-900 tracking-[0.1em] uppercase">
+                  <span className="text-[10px] font-bold text-[#0B1525] tracking-[0.1em] uppercase">
                     {slide.badge}
                   </span>
                 </div>
@@ -173,7 +173,7 @@ export default function BrandHighlight() {
                   <a href="#" className="text-white font-bold text-[14px] hover:underline underline-offset-4">
                     Learn More &gt;
                   </a>
-                  <button className="bg-white hover:bg-neutral-100 text-neutral-900 font-bold text-[15px] px-8 py-3 rounded-md shadow-lg transition-colors">
+                  <button className="bg-white hover:bg-neutral-100 text-[#0B1525] font-bold text-[15px] px-8 py-3 rounded-md shadow-lg transition-colors">
                     Shop Now
                   </button>
                 </div>

@@ -40,7 +40,7 @@ const KILOWATT_HOURS = [
     { name: '5kWh', count: 1 },
 ];
 
-const Sidebar = () => {
+export const ProductFilters = () => {
     const [openSections, setOpenSections] = useState({
         categories: true,
         refineBy: true,
@@ -255,4 +255,23 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export const ProductSort = () => {
+    return (
+        <div className="flex flex-col sm:flex-row justify-end items-center sm:items-center gap-4 sm:gap-0 mb-6">
+            <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-700 font-medium whitespace-nowrap">Sort By:</span>
+                <div className="relative">
+                    <select className="border border-gray-300 text-sm py-2 pl-3 pr-8 focus:outline-none focus:border-black appearance-none bg-white w-40 sm:w-32 cursor-pointer">
+                        <option>A to Z</option>
+                        <option>Z to A</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    );
+};

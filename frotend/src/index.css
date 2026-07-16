@@ -39,22 +39,22 @@
   --background: #f3f4f6;
 
   /* Dark Engineering Surfaces */
-  --surface: #0a0a0a;
-  --surface-low: #111111;
-  --surface-high: #1a1a1a;
-  --surface-highest: #222222;
-  --surface-bright: #2c2c2c;
+  --surface: #0a101d;
+  --surface-low: #0B1525;
+  --surface-high: #111c33;
+  --surface-highest: #1a2642;
+  --surface-bright: #253454;
 
   /* Text */
   --text: #2b3440;
   --text-muted: #5d6775;
   --text-heading: #111827;
 
-  /* Brand — Yellow accent */
-  --primary: #fbbf24;
-  --primary-hover: #f59e0b;
-  --primary-container: #fbbf24;
-  --primary-text: #000000;
+  /* Brand — Green accent */
+  --primary: #22a055;
+  --primary-hover: #187a3e;
+  --primary-container: #22a055;
+  --primary-text: #ffffff;
 
   /* Secondary */
   --secondary: #bcc8d5;
@@ -73,7 +73,7 @@
   --code-bg: #f3f4f6;
 
   /* Effects */
-  --accent-glow: rgba(251, 191, 36, 0.15);
+  --accent-glow: rgba(34, 160, 85, 0.15);
 }
 
 /* =========================

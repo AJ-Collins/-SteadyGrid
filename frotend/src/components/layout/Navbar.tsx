@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, ShoppingCart, Menu, X, Phone, RefreshCw, User, HelpCircle, ChevronDown } from 'lucide-react';
+import { Search, ShoppingCart, Menu, X, Phone, User, HelpCircle, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -20,6 +20,7 @@ export default function Navbar() {
         { name: 'Portable Power Stations', href: '/shop/products/portable-power-stations' },
         { name: 'Battery Accessories', href: '/shop/products/battery-accessories' },
         { name: 'Mobile RV', href: '/shop/products/mobile-rv' },
+        { name: 'Wiring', href: '/shop/products/wiring' },
         { name: 'EV Chargers', href: '/shop/products/ev-chargers' },
         { name: 'Solar Panel Cleaning', href: '/shop/products/solar-panel-cleaning' },
         { name: 'Mounting Options', href: '/shop/products/mounting-options' },
@@ -52,9 +53,8 @@ export default function Navbar() {
       href: '/discover-more',
       disableLink: true,
       children: [
-        { name: 'Warranty', href: '/discover-more/warranty' },
         { name: 'About Us', href: '/discover-more/about-us' },
-        { name: 'Contact Our Experts', href: '/discover-more/contact-our-experts' },
+        { name: 'Contact Us', href: '/discover-more/contact-us' },
         { name: 'Frequently Asked Questions', href: '/discover-more/faq' },
         { name: 'Our Blog', href: '/discover-more/our-blog' },
       ]
@@ -65,10 +65,10 @@ export default function Navbar() {
     <header className="w-full bg-white z-50 sticky top-0">
       {/* Top Banner Alert */}
       <div className="w-full bg-[#22a055] text-white text-center py-2 px-4 text-xs md:text-sm font-semibold flex items-center justify-center gap-2 border-b border-[#187a3e]">
-        <a href='#shipping-details'>
+        <Link to='#shipping-details'>
           <span>⚡</span>
           <span>NEXT-DAY SHIPPING ON ALL ORDERS PLACED BEFORE 2 PM CST!</span>
-        </a>
+        </Link>
       </div>
 
       {/* Main Header (Search and Actions) */}
@@ -122,23 +122,23 @@ export default function Navbar() {
             </div>
 
             {/* Support / Help */}
-            <Link to="/help" className="hidden lg:flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors">
+            <Link to="/discover-more/contact-us" className="hidden lg:flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors">
               <HelpCircle className="w-4 h-4" />
               <span>HELP CENTER</span>
             </Link>
 
             {/* Compare */}
-            <Link to="/compare" className="hidden sm:flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors relative">
+            {/* <Link to="/compare" className="hidden sm:flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors relative">
               <RefreshCw className="w-4 h-4" />
               <span>COMPARE</span>
               <span className="absolute -top-2 -right-3 bg-[#22a055] text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                 0
               </span>
-            </Link>
+            </Link> */}
 
             {/* User Login */}
-            <Link to="/login" className="flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors">
-              <User className="w-4 h-4" />
+            <Link to="/auth/login" className="flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors">
+              <User className="w-5 h-5" />
               <span className="hidden sm:inline">LOG IN / REGISTER</span>
             </Link>
 

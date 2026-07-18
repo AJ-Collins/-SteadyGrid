@@ -20,7 +20,7 @@ const categories: ComponentCategory[] = [
   {
     name: 'Kits & Bundles',
     image: '/cat-kits-bundles.png',
-    href: '/shop/kits-bundles',
+    href: '/shop/solar-kits',
   },
   {
     name: 'Batteries',
@@ -30,32 +30,32 @@ const categories: ComponentCategory[] = [
   {
     name: 'High Efficiency Appliances',
     image: 'cat-kits-bundles.png',
-    href: '/shop/appliances',
+    href: '/shop/products/high-efficiency-appliances',
   },
   {
     name: 'Wiring',
     image: '/cat-solar-panels.png',
-    href: '/shop/wiring',
+    href: '/shop/products/wiring',
   },
   {
     name: 'System Components',
     image: '/cat-solar-panels.png',
-    href: '/shop/system-components',
+    href: '/shop/products/system-components',
   },
   {
     name: 'Rapid Shutdown Equipment',
-    image: 'cat-kits-bundles.png',
-    href: '/shop/rapid-shutdown',
+    image: 'https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/rapid-shutdown-1.png?t=1734106656',
+    href: '/shop/products/rapid-shutdown-equipment',
   },
   {
     name: 'Portable Power Stations',
     image: '/cat-inverters.png',
-    href: '/shop/portable-power',
+    href: '/shop/products/portable-power-stations',
   },
   {
     name: 'Charge Controllers',
     image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=400&q=80',
-    href: '/shop/charge-controllers',
+    href: '/shop/products/charge-controllers',
   },
 ];
 

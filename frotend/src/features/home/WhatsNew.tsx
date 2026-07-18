@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function WhatsNew() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -68,10 +69,10 @@ export default function WhatsNew() {
             </p>
           </div>
 
-          <a href="#" className="shrink-0 whitespace-nowrap flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-[11px] font-black tracking-widest text-neutral-400 hover:text-[#0B1525] uppercase transition-colors group/link mb-1">
+          <Link to="/shop/products/new-arrivals" className="shrink-0 whitespace-nowrap flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-[11px] font-black tracking-widest text-neutral-400 hover:text-[#0B1525] uppercase transition-colors group/link mb-1">
             <span>VIEW MORE</span>
             <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover/link:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         {/* Horizontal Scrollable Product List */}

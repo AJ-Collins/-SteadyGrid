@@ -48,7 +48,7 @@ export default function TrustBadges() {
               <p className="text-[13px] sm:text-[14px] text-neutral-600 leading-relaxed mb-8 flex-1 px-2">
                 {badge.description}
               </p>
-              <button className="bg-[#22a055] hover:bg-[#187a3e] text-white font-bold text-[13px] px-8 py-2.5 rounded-md shadow-sm transition-colors mt-auto">
+              <button className="bg-[#22a055] hover:bg-[#187a3e] text-white font-bold text-[13px] px-8 py-2.5 rounded-md shadow-sm transition-colors mt-auto cursor-pointer">
                 {badge.buttonText}
               </button>
             </div>

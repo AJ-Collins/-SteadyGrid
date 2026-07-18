@@ -1,15 +1,10 @@
-import { useState } from 'react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
-import { LuFilter } from "react-icons/lu";
-import { ProductFilters, ProductSort } from "../../features/shop/ProductFilters";
 import Pagination from "../../components/common/Pagination";
 import BrandCard from "../../components/common/BrandCard";
 import PageHeader from '../../components/common/PageHeader';
 
 export default function Brands() {
-    const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
-
     const brands = [
         { id: 1, name: "BLUETTI", logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxb4rT-M6odk32jV8Q-YwS90dUj9iTEnB2ywWebGUtAA&s=10", href: "/shop/brands/bluetti" },
         { id: 2, name: "BLUETTI", logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G42ewHJpwl4tGSTw5h6cFPMiqndhwYBbjzpiOmXMzw&s=10", href: "/shop/brands/bluetti" },

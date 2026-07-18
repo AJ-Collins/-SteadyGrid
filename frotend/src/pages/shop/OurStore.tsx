@@ -15,6 +15,29 @@ import {
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 
+const categories = [
+  {
+    title: "Solar Panels",
+    img: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/13660/14996/SunPro_440W_Bifacial_Solar_Panel_1__86744.1779113652.png",
+  },
+  {
+    title: "Inverters",
+    img: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/1920w/products/13457/15015/12000xp_Front__34872__75143.1779289053.jpg",
+  },
+  {
+    title: "Batteries",
+    img: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/wiring-1.png?t=1734106631",
+  },
+  {
+    title: "Mounting",
+    img: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/kits-and-bundles-7-2025.png?t=1752691446",
+  },
+  {
+    title: "Accessories",
+    img: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/-charge-controllers-2-2026-1-.png?t=1772137272",
+  },
+];
+
 export default function OurStore() {
     return (
         <div className="min-h-screen bg-white font-sans flex flex-col">
@@ -233,18 +256,33 @@ export default function OurStore() {
                 <section className="w-full bg-white py-16">
                     <div className="max-w-[1440px] mx-auto px-4 md:px-8">
                         <h2 className="text-xl md:text-2xl font-black text-center text-neutral-900 tracking-tight mb-10">
-                            Products You'll Find In Store
+                        Products You'll Find In Store
                         </h2>
 
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                            <CategoryCard title="Solar Panels" img="https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/13660/14996/SunPro_440W_Bifacial_Solar_Panel_1__86744.1779113652.png" />
-                            <CategoryCard title="Inverters" img="https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/1920w/products/13457/15015/12000xp_Front__34872__75143.1779289053.jpg" />
-                            <CategoryCard title="Batteries" img="https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/wiring-1.png?t=1734106631" />
-                            <CategoryCard title="Mounting" img="https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/kits-and-bundles-7-2025.png?t=1752691446" />
-                            <CategoryCard title="Accessories" img="https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/-charge-controllers-2-2026-1-.png?t=1772137272" />
+                        {categories.map((category, index) => {
+                            const isLast = index === categories.length - 1;
+                            const isOdd = categories.length % 2 !== 0;
+
+                            return (
+                            <div
+                                key={category.title}
+                                className={
+                                isOdd && isLast
+                                    ? "col-span-2 justify-self-center w-1/2 md:col-span-1 md:justify-self-auto md:w-full"
+                                    : "w-full"
+                                }
+                            >
+                                <CategoryCard
+                                title={category.title}
+                                img={category.img}
+                                />
+                            </div>
+                            );
+                        })}
                         </div>
                     </div>
-                </section>
+                    </section>
 
                 {/* 7. Footer Banner */}
                 <section className="w-full max-w-[1440px] mx-auto px-4 md:px-8 pb-16">

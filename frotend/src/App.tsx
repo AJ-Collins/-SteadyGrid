@@ -15,12 +15,17 @@ import OurStore from "./pages/shop/OurStore";
 import Brands from "./pages/shop/Brands";
 import Projects from "./pages/shop/Projects";
 import Faq from "./pages/Faq";
+import AboutUs from "./pages/AboutUs";
+import OurBlog from "./pages/OurBlog";
+import ContactUs from "./pages/ContactUs";
 import NewArrivals from "./pages/shop/allproducts/NewArrivals";
+import TopSellersProducts  from "./pages/shop/allproducts/TopSellersProducts";
 import KitsBundles from "./pages/shop/allproducts/KitsBandles";
 import BatteryAccessories from "./pages/shop/allproducts/BatteryAccessories";
 import PowerStations from "./pages/shop/allproducts/PowerStations";
 import MobileRv from "./pages/shop/allproducts/MobileRv";
 import EvChargers from "./pages/shop/allproducts/EvChargers";
+import Wiring from "./pages/shop/allproducts/Wiring";
 import SolarPanelCleaning from "./pages/shop/allproducts/SolarPanelCleaning";
 import MountingOptions from "./pages/shop/allproducts/MountingOptions";
 import SystemComponents from "./pages/shop/allproducts/SystemComponents";
@@ -33,6 +38,14 @@ import MarineAndBoating from "./pages/shop/shopbyproject/MarineAndBoating";
 import MobileAndAdventure from "./pages/shop/shopbyproject/MobileAndAdventure";
 import MountingSolutions from "./pages/shop/shopbyproject/MountingSolutions";
 import SurvivalPreparedness from "./pages/shop/shopbyproject/SurvivalPreparedness";
+import BatteryBackup from "./pages/shop/shopbyproject/BatteryBackup";
+import RapidShutdown from "./pages/shop/allproducts/RapidShutdown";
+
+// Auth pages
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import ResetPassword from "./pages/auth/ResetPassword";
 
 
 // const queryClient = new QueryClient();
@@ -47,6 +60,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/support" element={<Faq />} />
         <Route path="/discover-more/faq" element={<Faq />} />
+        <Route path="/discover-more/about-us" element={<AboutUs />} />
+        <Route path="/discover-more/contact-us" element={<ContactUs />} />
+        <Route path="/discover-more/our-blog" element={<OurBlog />} />
 
         {/* Shop pages */}
         <Route path="/shop/brands" element={<Brands />} />
@@ -58,16 +74,19 @@ export default function App() {
         <Route path="/shop/projects" element={<Projects />} />
         {/* Shop by project pages */}
         <Route path="/shop/products/new-arrivals" element={<NewArrivals />} />
+        <Route path="/shop/products/top-sellers" element={<TopSellersProducts />} />
         <Route path="/shop/products/kits-bundles" element={<KitsBundles />} />
         <Route path="/shop/products/portable-power-stations" element={<PowerStations />} />
         <Route path="/shop/products/battery-accessories" element={<BatteryAccessories />} />
         <Route path="/shop/products/mobile-rv" element={<MobileRv />} />
         <Route path="/shop/products/ev-chargers" element={<EvChargers />} />
+        <Route path="/shop/products/wiring" element={<Wiring />} />
         <Route path="/shop/products/solar-panel-cleaning" element={<SolarPanelCleaning />} />
         <Route path="/shop/products/mounting-options" element={<MountingOptions />} />
         <Route path="/shop/products/system-components" element={<SystemComponents />} />
         <Route path="/shop/products/high-efficiency-appliances" element={<HighEfficiencyAppliances />} />
         <Route path="/shop/products/charge-controllers" element={<ChargeControllers />} />
+        <Route path="/shop/products/rapid-shutdown-equipment" element={<RapidShutdown />} />
         {/* Shop By Project */}
         <Route path="/shop/projects/camping-outdoors" element={<CampingAndOutdoors />} />
         <Route path="/shop/projects/ev-charging" element={<EvCharging />} />
@@ -76,6 +95,13 @@ export default function App() {
         <Route path="/shop/projects/mobile-adventure" element={<MobileAndAdventure />} />
         <Route path="/shop/projects/mounting-solutions" element={<MountingSolutions />} />
         <Route path="/shop/projects/survival-preparedness" element={<SurvivalPreparedness />} />
+        <Route path="/shop/projects/battery-backup" element={<BatteryBackup />} />
+
+        {/* Auth Routes */}
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/Register" element={<Register />} />
+        <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+        <Route path="/auth/reset-password" element={<ResetPassword />} />
 
         {/* Protected */}
         {/* User & Marketer */}

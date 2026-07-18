@@ -57,7 +57,7 @@ export default function Projects() {
                     { label: "Home", href: "/" },
                     { label: "All Projects" },
                 ]}
-                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
+                imageUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
             />
         <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-6 py-6 md:py-8 flex flex-col lg:flex-row gap-6 md:gap-8 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 sm:gap-y-12">

@@ -111,18 +111,26 @@ export default function MountingOptions() {
                 { label: "Home", href: "/" },
                     { label: "Mounting Options & Hardware" },
                 ]}
-                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
+                imageUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
             />
+            {/* Banner */}
+            <div className="py-8">
+                <Banner />
+            </div>
             <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-6 py-6 md:py-8 flex flex-col lg:flex-row gap-6 md:gap-8 relative">
                 {/* Mobile Filter Toggle */}
-                <div className="lg:hidden w-full flex justify-end">
+                <div className="lg:hidden flex gap-2 mb-4">
                     <button
-                        className="flex items-center gap-2 border border-gray-300 px-4 py-2 text-sm font-semibold hover:bg-gray-50 transition-colors"
+                        className="flex-1 h-10 flex items-center justify-center gap-1.5 border border-gray-300 rounded-md text-xs font-medium hover:bg-gray-50 transition-colors"
                         onClick={() => setIsMobileFiltersOpen(true)}
                     >
-                        <LuFilter className="w-5 h-5" />
-                        Filters
+                        <LuFilter className="w-4 h-4" />
+                        <span>Filters</span>
                     </button>
+
+                    <div className="flex-1 h-10">
+                        <ProductSort />
+                    </div>
                 </div>
 
                 {/* Mobile Sidebar Overlay */}
@@ -160,10 +168,10 @@ export default function MountingOptions() {
                 </div>
 
                 <div className="flex-1 min-w-0">
-                    {/* Banner */}
-                    <Banner />
                     {/* Toolbar */}
-                    <ProductSort />
+                    <div className="hidden lg:block">
+                        <ProductSort />
+                    </div>
 
                     {/* Product Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">

@@ -112,7 +112,7 @@ export default function EvCharging() {
                 { label: "Shop By Project" },
                     { label: "EV Charging" },
                 ]}
-                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
+                imageUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
             />
             {/* Banner */}
             <div className="py-8">

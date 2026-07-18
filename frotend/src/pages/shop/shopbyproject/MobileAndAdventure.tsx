@@ -8,7 +8,7 @@ import Pagination from "../../../components/common/Pagination";
 import Banner from '../../../features/banner/Banner';
 import PageHeader from '../../../components/common/PageHeader';
 
-export default function MarineAndBoating() {
+export default function MobileAndAdventure() {
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
     const products = [
@@ -20,7 +20,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...",
             oldPrice: 499.00,
             price: 396.59,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2295/2075/988e91f0-7f54-4a62-a93b-b4f78cf5f65a__86444.1739287931.PNG?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/3698/4079/6000XP00010_1_updatedwhite__32468.1758054079.jpg?c=1",
             inStock: true
         },
         {
@@ -31,7 +31,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX BP2600 Expansion Battery 2048Wh LFP | For SOLIX 2600 | A1781111-85 Boost your power capa...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/8623/9685/12V_Husky_2_Battery__74550.1742564272.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/3698/4079/6000XP00010_1_updatedwhite__32468.1758054079.jpg?c=1",
             inStock: true
         },
         {
@@ -53,7 +53,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX EverFrost 2 Removable Battery | 288Wh LFP Power Module Keep your adventures powered with...",
             oldPrice: 249.00,
             price: 197.73,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/8623/9685/12V_Husky_2_Battery__74550.1742564272.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/6173/7048/505e8231-c16f-4339-882c-5c3a34a2f4f0__55873__16106.1743444752.png?c=1",
             inStock: false
         },
         {
@@ -64,7 +64,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...",
             oldPrice: 499.00,
             price: 396.59,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/8623/9685/12V_Husky_2_Battery__74550.1742564272.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/6173/7048/505e8231-c16f-4339-882c-5c3a34a2f4f0__55873__16106.1743444752.png?c=1",
             inStock: true
         },
         {
@@ -75,7 +75,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX BP2600 Expansion Battery 2048Wh LFP | For SOLIX 2600 | A1781111-85 Boost your power capa...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/9382/10619/KIT-V0006__09992.1775660733.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/10915/12440/BNDL-GR003__76519.1761756310.png?c=1",
             inStock: true
         },
         {
@@ -86,7 +86,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...",
             oldPrice: 499.00,
             price: 396.59,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/9382/10619/KIT-V0006__09992.1775660733.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/10915/12440/BNDL-GR003__76519.1761756310.png?c=1",
             inStock: true
         },
         {
@@ -97,7 +97,7 @@ export default function MarineAndBoating() {
             description: "Anker SOLIX BP2600 Expansion Battery 2048Wh LFP | For SOLIX 2600 | A1781111-85 Boost your power capa...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/6822/7748/1512007img1__39788.1742844825.jpg?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/10273/11595/Anker_SOLIX_BP3000_Expansion_Battery__62491.1754587595.png?c=1",
             inStock: true
         },
     ];
@@ -106,11 +106,11 @@ export default function MarineAndBoating() {
         <div className="min-h-screen bg-white font-sans flex flex-col">
             <Navbar />
             <PageHeader
-                title="Marine and Boating"
+                title="Mobile and Adventure"
                 breadcrumbs={[
                 { label: "Home", href: "/" },
                 { label: "Shop By Project" },
-                    { label: "Marine and Boating" },
+                    { label: "Mobile and Adventure" },
                 ]}
                 imageUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
             />

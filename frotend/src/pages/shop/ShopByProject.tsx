@@ -104,13 +104,13 @@ export default function ShopByProject() {
     return (
          <div className="min-h-screen bg-white font-sans flex flex-col">
             <Navbar />
-        <PageHeader
+            <PageHeader
                 title="Homesteading"
                 breadcrumbs={[
                 { label: "Home", href: "/" },
                     { label: "Homesteading" },
                 ]}
-                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
+                imageUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
             />
             <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-6 py-6 md:py-8 flex flex-col lg:flex-row gap-6 md:gap-8 relative">
                 {/* Mobile Filter Toggle */}

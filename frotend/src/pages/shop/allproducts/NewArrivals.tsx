@@ -135,7 +135,7 @@ export default function NewArrivals() {
                     { label: "Home", href: "/" },
                     { label: "New Arrivals" },
                 ]}
-                imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
+                imageUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&q=80"
             />
             <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-6 py-8 md:py-12 flex flex-col gap-12 relative overflow-hidden">
                 {groupedData.map((group, index) => (

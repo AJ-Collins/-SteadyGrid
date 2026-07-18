@@ -36,7 +36,7 @@ export default function Navbar() {
             { name: 'EV Charging', href: '/shop/projects/ev-charging' },
             { name: 'Homesteading', href: '/shop/projects/homesteading' },
             { name: 'Marine And Boating', href: '/shop/projects/marine-boating' },
-            { name: 'Mobile Adventures', href: '/shop/projects/mobile-adventures' },
+            { name: 'Mobile Adventures', href: '/shop/projects/mobile-adventure' },
             { name: 'Mounting Solutions', href: '/shop/projects/mounting-solutions' },
             { name: 'Survival Preparedness', href: '/shop/projects/survival-preparedness' },
         ],
@@ -65,10 +65,9 @@ export default function Navbar() {
     <header className="w-full bg-white z-50 sticky top-0">
       {/* Top Banner Alert */}
       <div className="w-full bg-[#22a055] text-white text-center py-2 px-4 text-xs md:text-sm font-semibold flex items-center justify-center gap-2 border-b border-[#187a3e]">
-        <span className="animate-pulse">⚡</span>
-        <span>NEXT-DAY SHIPPING ON ALL ORDERS PLACED BEFORE 2 PM CST!</span>
-        <a href="#shipping-details" className="underline hover:text-neutral-800 transition-colors ml-1">
-          details
+        <a href='#shipping-details'>
+          <span>⚡</span>
+          <span>NEXT-DAY SHIPPING ON ALL ORDERS PLACED BEFORE 2 PM CST!</span>
         </a>
       </div>
 

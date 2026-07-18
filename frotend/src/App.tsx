@@ -30,6 +30,9 @@ import CampingAndOutdoors from "./pages/shop/shopbyproject/CampingAndOutdoors";
 import EvCharging from "./pages/shop/shopbyproject/EvCharging";
 import Homesteading from "./pages/shop/shopbyproject/Homesteading";
 import MarineAndBoating from "./pages/shop/shopbyproject/MarineAndBoating";
+import MobileAndAdventure from "./pages/shop/shopbyproject/MobileAndAdventure";
+import MountingSolutions from "./pages/shop/shopbyproject/MountingSolutions";
+import SurvivalPreparedness from "./pages/shop/shopbyproject/SurvivalPreparedness";
 
 
 // const queryClient = new QueryClient();
@@ -70,6 +73,9 @@ export default function App() {
         <Route path="/shop/projects/ev-charging" element={<EvCharging />} />
         <Route path="/shop/projects/homesteading" element={<Homesteading />} />
         <Route path="/shop/projects/marine-boating" element={<MarineAndBoating />} />
+        <Route path="/shop/projects/mobile-adventure" element={<MobileAndAdventure />} />
+        <Route path="/shop/projects/mounting-solutions" element={<MountingSolutions />} />
+        <Route path="/shop/projects/survival-preparedness" element={<SurvivalPreparedness />} />
 
         {/* Protected */}
         {/* User & Marketer */}

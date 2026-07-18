@@ -6,7 +6,6 @@ import Footer from '../components/layout/Footer';
 import PageHeader from '../components/common/PageHeader';
 import { faqData, type FaqItem } from './faqData';
 
-// ─── Accordion Item ─────────────────────────────────────────────────────────────
 const AccordionItem = ({
     item,
     isOpen,
@@ -75,7 +74,6 @@ const HighlightCard = ({
     </div>
 );
 
-// ─── Main Page ───────────────────────────────────────────────────────────────────
 export default function Faq() {
     const [openCategory, setOpenCategory] = useState<string>(faqData[0].title);
     const [openItems, setOpenItems] = useState<Record<string, string | null>>({
@@ -140,7 +138,7 @@ export default function Faq() {
                                 </span>
                             </div>
                             <nav className="flex flex-col">
-                                {faqData.map((category, idx) => (
+                                {faqData.map((category) => (
                                     <button
                                         key={category.title}
                                         onClick={() => {

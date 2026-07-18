@@ -1,15 +1,14 @@
-import { useState } from "react";
-import Navbar  from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
-import Banner from "../../features/banner/Banner";
-import { ProductFilters, ProductSort } from "../../features/shop/ProductFilters";
-import ProductsCard from "../../components/common/ProductCard";
-import Pagination from "../../components/common/Pagination";
+import { useState } from 'react';
 import { LuFilter } from "react-icons/lu";
-import PageHeader from "../../components/common/PageHeader";
+import Navbar from "../../../components/layout/Navbar";
+import Footer from "../../../components/layout/Footer";
+import { ProductFilters, ProductSort } from "../../../features/shop/ProductFilters";
+import ProductCard from "../../../components/common/ProductCard";
+import Pagination from "../../../components/common/Pagination";
+import Banner from '../../../features/banner/Banner';
+import PageHeader from '../../../components/common/PageHeader';
 
-
-export default function Inverters() {
+export default function MobileRv() {
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
     const products = [
@@ -102,28 +101,30 @@ export default function Inverters() {
             inStock: true
         },
     ];
+
     return (
         <div className="min-h-screen bg-white font-sans flex flex-col">
             <Navbar />
             <PageHeader
-                title="Inverters"
+                title="Mobile - RV"
                 breadcrumbs={[
-                    { label: "Home", href: "/" },
-                    { label: "Inverters" },
+                { label: "Home", href: "/" },
+                    { label: "Mobile - RV" },
                 ]}
                 imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
             />
             <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-6 py-6 md:py-8 flex flex-col lg:flex-row gap-6 md:gap-8 relative">
-                {/* Filters sidebar */}
+                {/* Mobile Filter Toggle */}
                 <div className="lg:hidden w-full flex justify-end">
-                    <button 
-                        className="flex items-center gap-2 border border-gray-300 px-4 py-2 text-sm font-semibodl hover:bg:gray-50 transition-colors"
+                    <button
+                        className="flex items-center gap-2 border border-gray-300 px-4 py-2 text-sm font-semibold hover:bg-gray-50 transition-colors"
                         onClick={() => setIsMobileFiltersOpen(true)}
                     >
                         <LuFilter className="w-5 h-5" />
                         Filters
                     </button>
                 </div>
+
                 {/* Mobile Sidebar Overlay */}
                 {isMobileFiltersOpen && (
                     <div className="fixed inset-0 z-50 lg:hidden flex">
@@ -153,20 +154,24 @@ export default function Inverters() {
                     </div>
                 )}
 
-                {/* Desktop Sidebar */
+                {/* Desktop Sidebar */}
                 <div className="hidden lg:block w-[280px] shrink-0">
                     <ProductFilters />
-                </div>}
+                </div>
+
                 <div className="flex-1 min-w-0">
+                    {/* Banner */}
                     <Banner />
+                    {/* Toolbar */}
                     <ProductSort />
-                    {/* Product grid */}
+
+                    {/* Product Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-                        {/* Product cards */}
                         {products.map(product => (
-                            <ProductsCard key={product.id} {...product} />
-                        ))}                    
+                            <ProductCard key={product.id} {...product} />
+                        ))}
                     </div>
+
                     {/* Pagination */}
                     <Pagination currentPage={1} totalPages={3} />
                 </div>

@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import Navbar from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
-import Pagination from "../../components/common/Pagination";
-import SolarKitsProductCard from "../../components/common/SolarKitsProductCard";
-import PageHeader from "../../components/common/PageHeader";
+import Navbar from "../../../components/layout/Navbar";
+import Footer from "../../../components/layout/Footer";
+import Pagination from "../../../components/common/Pagination";
+import SolarKitsProductCard from "../../../components/common/SolarKitsProductCard";
+import PageHeader from "../../../components/common/PageHeader";
 
 interface Product {
     id: number;
@@ -84,7 +84,7 @@ const ProductGroupSection = ({ group }: { group: ProductGroup }) => {
     );
 };
 
-export default function SolarKits() {
+export default function NewArrivals() {
     // Shared mock items for demonstration
     const anker1 = {
         id: 1, brand: "Anker", title: "Anker | SOLIX BP1000 Expansion Battery 1056Wh LFP", sku: "1638006", description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...", oldPrice: 499.00, price: 396.59, imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/product_images/attribute_rule_images/896_source_1769616402.png", inStock: true
@@ -121,7 +121,7 @@ export default function SolarKits() {
             items: [anker3, anker4, anker1, anker2, anker5]
         },
         {
-            heading: "Stay Powered Through Anything – Battery Backup Solutions",
+            heading: "Power Your Adventures: Solar Kits for Every Journey",
             items: [anker1, anker3, anker2, anker4, anker5]
         }
     ];
@@ -130,10 +130,10 @@ export default function SolarKits() {
         <div className="min-h-screen bg-white font-sans flex flex-col">
             <Navbar />
             <PageHeader
-                title="Solar Kits"
+                title="New Arrivals"
                 breadcrumbs={[
                     { label: "Home", href: "/" },
-                    { label: "Solar Kits" },
+                    { label: "New Arrivals" },
                 ]}
                 imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
             />

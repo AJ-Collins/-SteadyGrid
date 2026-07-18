@@ -17,10 +17,8 @@ export default function Navbar() {
       children: [
         { name: 'New Arrivals', href: '/shop/products/new-arrivals' },
         { name: 'Kits & Bundles', href: '/shop/products/kits-bundles' },
-        { name: 'Batteries', href: '/shop/products/batteries' },
         { name: 'Portable Power Stations', href: '/shop/products/portable-power-stations' },
         { name: 'Battery Accessories', href: '/shop/products/battery-accessories' },
-        { name: 'Inverters', href: '/shop/products/inverters' },
         { name: 'Mobile RV', href: '/shop/products/mobile-rv' },
         { name: 'EV Chargers', href: '/shop/products/ev-chargers' },
         { name: 'Solar Panel Cleaning', href: '/shop/products/solar-panel-cleaning' },

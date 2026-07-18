@@ -15,7 +15,7 @@ interface PageHeaderProps {
 export default function PageHeader({ title, breadcrumbs, imageUrl }: PageHeaderProps) {
     return (
         <div
-            className="relative w-full h-[220px] md:h-[260px] flex items-center justify-center overflow-hidden"
+            className="relative w-full max-w-[1440px] mx-auto h-[220px] sm:h-[220px] md:h-[260px] flex items-center justify-center lg:h-[300px] overflow-hidden"            
         >
             {/* Background image */}
             <img

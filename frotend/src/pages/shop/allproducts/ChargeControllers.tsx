@@ -1,15 +1,14 @@
-import { useState } from "react";
-import Navbar  from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
-import Banner from "../../features/banner/Banner";
-import { ProductFilters, ProductSort } from "../../features/shop/ProductFilters";
-import ProductsCard from "../../components/common/ProductCard";
-import Pagination from "../../components/common/Pagination";
+import { useState } from 'react';
 import { LuFilter } from "react-icons/lu";
-import PageHeader from "../../components/common/PageHeader";
+import Navbar from "../../../components/layout/Navbar";
+import Footer from "../../../components/layout/Footer";
+import { ProductFilters, ProductSort } from "../../../features/shop/ProductFilters";
+import ProductCard from "../../../components/common/ProductCard";
+import Pagination from "../../../components/common/Pagination";
+import Banner from '../../../features/banner/Banner';
+import PageHeader from '../../../components/common/PageHeader';
 
-
-export default function Inverters() {
+export default function ChargeControllers() {
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
     const products = [
@@ -21,7 +20,7 @@ export default function Inverters() {
             description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...",
             oldPrice: 499.00,
             price: 396.59,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2218/5246/Rack_V2.1_1600__57614.1738959899.jpg?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2621/2624/d56f1e70-5d48-499f-a11e-a51b326bc6f3__42431.1743625306.jpg?c=1",
             inStock: true
         },
         {
@@ -32,7 +31,7 @@ export default function Inverters() {
             description: "Anker SOLIX BP2600 Expansion Battery 2048Wh LFP | For SOLIX 2600 | A1781111-85 Boost your power capa...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/7196/8280/Pytes_Battery_Cabinet_Bundle__82763.1760362640.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2286/2049/c7d69899-1aa4-456d-8dc2-f18bb8bddd18__02001.1743691827.PNG?c=1",
             inStock: true
         },
         {
@@ -43,7 +42,7 @@ export default function Inverters() {
             description: "Anker SOLIX BP3000 Expansion Battery | 3072Wh Add-On for F3000 Expand your power capacity with the ...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/7196/8280/Pytes_Battery_Cabinet_Bundle__82763.1760362640.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2621/2624/d56f1e70-5d48-499f-a11e-a51b326bc6f3__42431.1743625306.jpg?c=1",
             inStock: true
         },
         {
@@ -54,7 +53,7 @@ export default function Inverters() {
             description: "Anker SOLIX EverFrost 2 Removable Battery | 288Wh LFP Power Module Keep your adventures powered with...",
             oldPrice: 249.00,
             price: 197.73,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/7196/8280/Pytes_Battery_Cabinet_Bundle__82763.1760362640.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2286/2049/c7d69899-1aa4-456d-8dc2-f18bb8bddd18__02001.1743691827.PNG?c=1",
             inStock: false
         },
         {
@@ -65,7 +64,7 @@ export default function Inverters() {
             description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...",
             oldPrice: 499.00,
             price: 396.59,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2218/5246/Rack_V2.1_1600__57614.1738959899.jpg?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/1286/923/1519019-timg__83011.1744054847.png?c=1",
             inStock: true
         },
         {
@@ -76,7 +75,7 @@ export default function Inverters() {
             description: "Anker SOLIX BP2600 Expansion Battery 2048Wh LFP | For SOLIX 2600 | A1781111-85 Boost your power capa...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/7196/8280/Pytes_Battery_Cabinet_Bundle__82763.1760362640.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/1286/923/1519019-timg__83011.1744054847.png?c=1",
             inStock: true
         },
         {
@@ -87,7 +86,7 @@ export default function Inverters() {
             description: "Anker SOLIX BP1000 Expansion Battery 1056Wh LFP | For SOLIX C1000 | A1761111-85 Elevate your ener...",
             oldPrice: 499.00,
             price: 396.59,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/2218/5246/Rack_V2.1_1600__57614.1738959899.jpg?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/12424/13944/OutBack_Power_FLEXmax_80A_MPPT_Charge_Controller_1__71983.1772644353.png?c=1",
             inStock: true
         },
         {
@@ -98,32 +97,34 @@ export default function Inverters() {
             description: "Anker SOLIX BP2600 Expansion Battery 2048Wh LFP | For SOLIX 2600 | A1781111-85 Boost your power capa...",
             oldPrice: 1399.00,
             price: 1112.50,
-            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/7196/8280/Pytes_Battery_Cabinet_Bundle__82763.1760362640.png?c=1",
+            imageUrl: "https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/320w/products/12423/13919/OutBack_Power_FLEXmax_100A_MPPT_Charge_Controller__50147.1772724249.png?c=1",
             inStock: true
         },
     ];
+
     return (
         <div className="min-h-screen bg-white font-sans flex flex-col">
             <Navbar />
             <PageHeader
-                title="Inverters"
+                title="Charge Controllers"
                 breadcrumbs={[
-                    { label: "Home", href: "/" },
-                    { label: "Inverters" },
+                { label: "Home", href: "/" },
+                    { label: "Charge Controllers" },
                 ]}
                 imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
             />
             <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 md:px-6 py-6 md:py-8 flex flex-col lg:flex-row gap-6 md:gap-8 relative">
-                {/* Filters sidebar */}
+                {/* Mobile Filter Toggle */}
                 <div className="lg:hidden w-full flex justify-end">
-                    <button 
-                        className="flex items-center gap-2 border border-gray-300 px-4 py-2 text-sm font-semibodl hover:bg:gray-50 transition-colors"
+                    <button
+                        className="flex items-center gap-2 border border-gray-300 px-4 py-2 text-sm font-semibold hover:bg-gray-50 transition-colors"
                         onClick={() => setIsMobileFiltersOpen(true)}
                     >
                         <LuFilter className="w-5 h-5" />
                         Filters
                     </button>
                 </div>
+
                 {/* Mobile Sidebar Overlay */}
                 {isMobileFiltersOpen && (
                     <div className="fixed inset-0 z-50 lg:hidden flex">
@@ -153,20 +154,24 @@ export default function Inverters() {
                     </div>
                 )}
 
-                {/* Desktop Sidebar */
+                {/* Desktop Sidebar */}
                 <div className="hidden lg:block w-[280px] shrink-0">
                     <ProductFilters />
-                </div>}
+                </div>
+
                 <div className="flex-1 min-w-0">
+                    {/* Banner */}
                     <Banner />
+                    {/* Toolbar */}
                     <ProductSort />
-                    {/* Product grid */}
+
+                    {/* Product Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-                        {/* Product cards */}
                         {products.map(product => (
-                            <ProductsCard key={product.id} {...product} />
-                        ))}                    
+                            <ProductCard key={product.id} {...product} />
+                        ))}
                     </div>
+
                     {/* Pagination */}
                     <Pagination currentPage={1} totalPages={3} />
                 </div>

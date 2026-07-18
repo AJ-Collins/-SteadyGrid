@@ -1,7 +1,8 @@
 import React from 'react';
 const BatteriesBanner: React.FC = () => {
     return (
-        <div className="relative w-full min-h-[280px] md:h-[320px] bg-[#0B1525] text-white flex items-center p-6 md:p-12 overflow-hidden mb-6 group rounded-sm">
+        <div 
+        className="relative w-full max-w-[1440px] mx-auto min-h-[280px] sm:h-[220px] md:h-[320px] bg-[#0B1525] text-white flex items-center justify-center p-6 md:p-12 overflow-hidden mb-6 group">
             {/* Starry background effect */}
             <div className="absolute inset-0 opacity-40" style={{
                 backgroundImage: 'radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 1px, transparent 1px), radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.2) 1px, transparent 1px), radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 1px, transparent 1px)',

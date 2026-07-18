@@ -70,10 +70,10 @@ export default function Batteries() {
         <div className="min-h-screen bg-white font-sans flex flex-col">
             <Navbar />
             <PageHeader
-                title="Brands"
+                title="Solar Panels"
                 breadcrumbs={[
                     { label: "Home", href: "/" },
-                    { label: "All Brands" },
+                    { label: "Solar Panels" },
                 ]}
                 imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvTFFERhasU5pz-OA50g3aZXeCXw4Z22dp4C4YgZB2A&s=10"
             />

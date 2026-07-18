@@ -261,7 +261,7 @@ export const ProductSort = () => {
             <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-700 font-medium whitespace-nowrap">Sort By:</span>
                 <div className="relative">
-                    <select className="border border-gray-300 text-sm py-2 pl-3 pr-8 focus:outline-none focus:border-black appearance-none bg-white w-40 sm:w-32 cursor-pointer">
+                    <select className="border rounded-md border-gray-300 text-sm py-2 pl-3 pr-8 focus:outline-none focus:border-black appearance-none bg-white w-40 sm:w-32 cursor-pointer">
                         <option>A to Z</option>
                         <option>Z to A</option>
                         <option>Price: Low to High</option>

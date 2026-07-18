@@ -23,18 +23,18 @@ const SolarKitsProductCard: React.FC<SolarKitsProductCardProps> = ({
     return (
         <div className="w-[240px] sm:w-[280px] md:w-[320px] border border-gray-200 flex flex-col relative bg-white hover:shadow-xl transition-all duration-300 group h-full shrink-0">
             {/* Top Image Section */}
-            <div className="w-full h-[180px] sm:h-[200px] md:h-[240px] flex items-center justify-center overflow-hidden cursor-pointer bg-gray-50/50 p-6 relative">                
+            <div className="w-full h-[180px] sm:h-[200px] md:h-[240px] flex items-center justify-center overflow-hidden bg-gray-50/50 p-6 relative shrink-0">
                 {/* Stock Badge */}
                 {!inStock && (
-                    <div className="absolute top-4 right-4 bg-gray-900 text-white text-[9px] sm:text-[10px] uppercase font-bold px-2 py-1">
+                    <div className="absolute top-4 right-4 bg-gray-900 text-white text-[9px] sm:text-[10px] uppercase font-bold px-2 py-1 z-10">
                         Out of Stock
                     </div>
                 )}
-                
+
                 <img
                     src={imageUrl}
                     alt={title}
-                    className="w-full h-full object-contain"
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
 
@@ -68,14 +68,14 @@ const SolarKitsProductCard: React.FC<SolarKitsProductCardProps> = ({
 
                 <div className="shrink-0">
                     {inStock ? (
-                        <button className="bg-[#22a055] text-white py-2 px-3 sm:py-2.5 sm:px-4 flex items-center justify-center gap-1.5 sm:gap-2 text-[12px] sm:text-sm font-bold hover:bg-[#187a3e] transition-colors cursor-pointer shadow-sm hover:shadow-md" aria-label="Add to cart">
+                        <button className="bg-[#22a055] text-white py-2 px-3 sm:py-2.5 sm:px-4 flex items-center justify-center gap-1.5 sm:gap-2 text-[12px] sm:text-sm font-bold hover:bg-[#187a3e] transition-colors cursor-pointer shadow-sm hover:shadow-md rounded-md" aria-label="Add to cart">
                             <span>Add</span>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                         </button>
                     ) : (
-                        <button className="bg-gray-100 text-gray-400 py-2 px-3 sm:py-2.5 sm:px-4 flex items-center justify-center gap-2 text-[12px] sm:text-sm font-bold cursor-not-allowed border border-gray-200">
+                        <button className="bg-gray-100 text-gray-400 py-2 px-3 sm:py-2.5 sm:px-4 flex items-center justify-center gap-2 text-[12px] sm:text-sm font-bold cursor-not-allowed border border-gray-200 rounded-md" aria-label="Out of stock">
                             Out
                         </button>
                     )}

@@ -36,9 +36,9 @@ const posts = [
         image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&q=80',
     },
     {
-        title: 'EcoFlow crosses 5 million users across 150 regions',
+        title: 'SteadyGrid crosses 5 million users across 150 regions',
         excerpt:
-            'A look back at how EcoFlow grew from a 2017 startup into a trusted energy company with headquarters in the USA, Germany, and Japan.',
+            'A look back at how SteadyGrid grew from a 2017 startup into a trusted energy company with headquarters in the USA, Germany, and Japan.',
         category: 'Company news',
         date: 'Jun 22, 2026',
         readTime: '3 min read',
@@ -111,7 +111,7 @@ export default function OurBlog() {
                         Power, explained.
                     </h1>
                     <p className="text-sm md:text-base text-gray-500 leading-relaxed">
-                        Product deep dives, solar sizing guides, and stories from the EcoFlow team — everything
+                        Product deep dives, solar sizing guides, and stories from the SteadyGrid team — everything
                         you need to get the most out of your power system.
                     </p>
                 </section>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Search, ShoppingCart, Menu, X, Phone, User, HelpCircle, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../../assets/logos/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,21 +74,15 @@ export default function Navbar() {
 
       {/* Main Header (Search and Actions) */}
       <div className="border-b border-neutral-200">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-4">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group shrink-0">
-            <div className="w-10 h-10 rounded-lg bg-[#0B1525] flex items-center justify-center text-[#22a055] font-extrabold text-2xl group-hover:bg-[#22a055] group-hover:text-black transition-all">
-              ⚡
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-black text-lg md:text-xl text-[#0B1525] tracking-tighter leading-none">
-                STEADYGRID
-              </span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#22a055] leading-none mt-0.5">
-                SOLAR
-              </span>
-            </div>
+          <Link to="/" className="flex items-center h-14 shrink-0">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-auto max-h-full object-contain"
+            />
           </Link>
 
           {/* Search Bar */}
@@ -117,7 +112,7 @@ export default function Navbar() {
               <Phone className="w-4 h-4 text-[#22a055]" />
               <div className="flex flex-col">
                 <span className="text-[9px] text-neutral-400 font-medium leading-none">QUESTIONS? CALL</span>
-                <span className="text-[#0B1525] font-extrabold tracking-wider leading-none mt-0.5">833-289-7652</span>
+                <span className="text-[#0B1525] font-extrabold tracking-wider leading-none mt-0.5">+254700000000</span>
               </div>
             </div>
 
@@ -143,7 +138,7 @@ export default function Navbar() {
             </Link>
 
             {/* Cart */}
-            <Link to="/cart" className="flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors relative">
+            <Link to="/auth/login" className="flex items-center gap-1.5 text-xs font-bold hover:text-[#0B1525] transition-colors relative">
               <div className="p-2 bg-neutral-100 rounded-full hover:bg-[#22a055] hover:text-white transition-all">
                 <ShoppingCart className="w-4 h-4" />
               </div>

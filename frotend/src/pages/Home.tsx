@@ -8,7 +8,7 @@ import TrustBadges from '../features/home/TrustBadges';
 import ShopByProject from '../features/home/ShopByProject';
 import ExploreBasics from '../features/home/ExploreBasics';
 import BrandLogos from '../features/home/BrandLogos';
-import BrandHighlight from '../features/home/BrandHighlight';
+// import BrandHighlight from '../features/home/BrandHighlight';
 
 export default function Home() {
   return (
@@ -16,32 +16,32 @@ export default function Home() {
       <Navbar />
 
       <main>
-        {/* 1. Hero: Two banners + free shipping strip */}
+        {/* Herong strip */}
         <Hero />
 
-        {/* 2. What's New section */}
+        {/* What's New section */}
         <WhatsNew />
 
-        {/* 3. Category navigation icons */}
+        {/* Category navigation icons */}
         <ComponentCategories />
 
-        {/* 3. Top Selling Products (horizontal scroll) */}
+        {/* Top Selling Products (horizontal scroll) */}
         <TopSellers />
 
-        {/* 4. Trust Badges (warranty, shipping, support) */}
+        {/* Trust Badges (warranty, shipping, support) */}
         <TrustBadges />
 
-        {/* 5. Shop by Project Size (4 cards) */}
+        {/* Shop by Project Size (4 cards) */}
         <ShopByProject />
 
-        {/* 7. Explore The Basics */}
+        {/* Explore The Basics */}
         <ExploreBasics />
 
-        {/* 7. Brand Logos strip */}
+        {/* Brand Logos strip */}
         <BrandLogos />
 
-        {/* 8. Brand Highlight Slider */}
-        <BrandHighlight />
+        {/* Brand Highlight Slider */}
+        {/* <BrandHighlight /> */}
       </main>
 
       <Footer />

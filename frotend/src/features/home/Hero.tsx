@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-/* ── Carousel Slide Data ── */
 const slides = [
   {
     image: '/solar-installation.png',
@@ -56,9 +55,6 @@ export default function Hero() {
   return (
     <section className="w-full bg-white py-0 sm:py-4 px-0 sm:px-4 lg:px-6">
       <div className="max-w-[1400px] mx-auto flex flex-col">
-        {/* ═══════════════════════════════════════════
-            Top Hero Carousel
-        ═══════════════════════════════════════════ */}
         <div className="w-full relative h-[450px] sm:h-[500px] lg:h-[550px] sm:rounded-t-lg overflow-hidden group bg-[#0a101d]">
           {/* Slides */}
           {slides.map((s, i) => (
@@ -113,9 +109,6 @@ export default function Hero() {
           </button>
         </div>
 
-        {/* ═══════════════════════════════════════════
-            Stats Ribbon
-        ═══════════════════════════════════════════ */}
         <div className="w-full bg-[#0B1525] sm:rounded-b-lg overflow-hidden grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-neutral-800 shadow-md">
 
           <div className="flex flex-col items-center justify-center p-4 sm:p-5 text-center group hover:bg-[#0B1525] transition-colors">

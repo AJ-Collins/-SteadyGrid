@@ -115,20 +115,6 @@ export default function OurStore() {
                                 <h2 className="text-2xl md:text-3xl font-black text-neutral-900 tracking-tight leading-snug">
                                     Visit The Signature<br/>Solar Retail Store
                                 </h2>
-                                
-                                <div className="flex w-full bg-neutral-100 p-1.5 rounded-md">
-                                    <div className="flex items-center flex-1 px-3 bg-neutral-100">
-                                        <Search className="w-4 h-4 text-neutral-400 mr-2" />
-                                        <input 
-                                            type="text" 
-                                            placeholder="Search by address, ZIP, or name"
-                                            className="bg-transparent w-full outline-none text-sm font-medium text-neutral-700 placeholder:text-neutral-400"
-                                        />
-                                    </div>
-                                    <button className="bg-neutral-900 text-white px-6 py-2.5 text-xs font-black uppercase tracking-wider rounded">
-                                        Search
-                                    </button>
-                                </div>
 
                                 {/* Store Card */}
                                 <div className="mt-4 flex flex-col gap-4">
@@ -138,16 +124,16 @@ export default function OurStore() {
                                         className="w-full h-48 object-cover rounded-lg"
                                     />
                                     <div>
-                                        <h3 className="font-black text-lg text-neutral-900 mb-1">S2 Retail Store</h3>
-                                        <p className="text-xs font-bold mb-4">
-                                            <span className="text-red-600">Closed</span> 
-                                            <span className="text-neutral-500 ml-1">Opens today at 9:00 AM</span>
+                                        <h3 className="font-black text-lg text-neutral-900 mb-1">Retail Store</h3>
+                                        <p className="text-xs font-bold mb-2">                                             
+                                            <span className="text-neutral-500 ml-1"><span className="text-green-600">Opens:</span> All Weekdays at 9:00 AM</span>
+                                        </p>
+                                        <p className="text-xs font-bold mb-4">                                             
+                                            <span className="text-neutral-500 ml-1"><span className="text-red-600">Closed:</span> On a Sunday and Public Holidays</span>
                                         </p>
                                         <p className="text-sm font-medium text-neutral-600 leading-relaxed max-w-[280px]">
-                                            614 Bill Bradford Rd Suite 101, Sulphur Springs, TX 75482, USA<br/>
-                                            (903) 321-7512<br/>
-                                            retail.store@signaturesolar.com<br/>
-                                            signaturesolar.com/retail-store
+                                            Nairobi, Kenya<br/>
+                                            retail.store@steadygrid.com<br/>
                                         </p>
                                     </div>
                                 </div>
@@ -155,17 +141,16 @@ export default function OurStore() {
 
                             {/* Right Map Area (Real Map) */}
                             <div className="bg-neutral-100 rounded-lg overflow-hidden relative border border-neutral-200 min-h-[400px]">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4960573752697!2d-95.61463992383796!3d33.12577416719113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864a13e53df39855%3A0xc3b8b15d2a71f0!2s614%20Bill%20Bradford%20Rd%20%23101%2C%20Sulphur%20Springs%2C%20TX%2075482!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
-                                    width="100%" 
-                                    height="100%" 
-                                    style={{ border: 0, position: 'absolute', top: 0, left: 0 }} 
-                                    allowFullScreen={false} 
-                                    loading="lazy" 
+                                <iframe
+                                    src="https://www.google.com/maps?q=Nairobi,+Kenya&output=embed"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+                                    loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Store Map"
+                                    title="Nairobi Map"
                                 ></iframe>
-                            </div>
+                                </div>
 
                         </div>
                     </div>
@@ -303,7 +288,7 @@ export default function OurStore() {
                         </div>
                         
                         <div className="absolute bottom-6 right-8 text-white font-black text-2xl tracking-tighter flex items-center gap-2">
-                            <span className="text-[#22a055]">S²</span> SIGNATURE SOLAR
+                            STEADYGRID
                         </div>
                     </div>
                     

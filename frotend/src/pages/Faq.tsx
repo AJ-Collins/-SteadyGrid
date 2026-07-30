@@ -121,7 +121,7 @@ export default function Faq() {
                     />
                     <HighlightCard
                         icon={MessageCircle}
-                        title="US-Based Support"
+                        title="Nairobi, Kenyan-Based Support"
                         description="In-house technical support team ready to help you."
                     />
                 </div>
@@ -177,7 +177,7 @@ export default function Faq() {
                                 href="tel:903-441-2090"
                                 className="block w-full text-center bg-[#0B1525] text-white text-xs font-bold py-2 px-4 hover:bg-[#1a2d4a] transition-colors duration-150"
                             >
-                                903-441-2090
+                                +254700000000
                             </a>
                         </div>
                     </aside>

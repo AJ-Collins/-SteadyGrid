@@ -6,25 +6,25 @@ export default function ExploreBasics() {
       id: 'size-system',
       title: 'Size Your System',
       image: 'https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/sizeyoursystemthumb2.png?t=1777411683',
-      href: '/learn/size-system',
+      href: '#',
     },
     {
       id: 'soft-start',
       title: 'Soft Start',
       image: 'https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/softstart4-29.png?t=1777500490',
-      href: '/learn/soft-start',
+      href: '#',
     },
     {
       id: 'ev-charging',
       title: 'EV Charging',
       image: 'https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/evcharge4-29.png?t=1777500505',
-      href: '/learn/ev-charging',
+      href: '#',
     },
     {
       id: 'summer-readiness',
       title: 'Summer Readiness',
       image: 'https://cdn11.bigcommerce.com/s-bi8c0htqsn/images/stencil/original/image-manager/summer-readiness-5-26.png?t=1779456424',
-      href: '/learn/summer-readiness',
+      href: '#',
     },
   ];
 
@@ -42,7 +42,7 @@ export default function ExploreBasics() {
               Learn more about how solar can protect your home from power outages this season
             </p>
             <Link
-              to="/learn"
+              to="#"
               className="inline-flex items-center justify-center bg-[#22a055] hover:bg-[#187a3e] text-white text-[14px] font-bold px-7 py-2.5 rounded shadow-sm transition-colors"
             >
               Learn More

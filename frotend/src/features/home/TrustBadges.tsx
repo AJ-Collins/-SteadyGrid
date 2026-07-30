@@ -5,7 +5,7 @@ export default function TrustBadges() {
     {
       icon: <Phone className="w-8 h-8 text-neutral-700 mb-4" strokeWidth={1.5} />,
       title: 'On-Time Solar Support',
-      description: 'Talk to real solar experts based in the U.S. whenever you need assistance.',
+      description: 'Talk to real solar experts based in Nairobi. whenever you need assistance.',
       buttonText: 'Call Now',
     },
     {

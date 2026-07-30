@@ -1,27 +1,27 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import logo from '../../assets/logos/logo.png';
 
 export default function Footer() {
   const navigateLinks = [
-    'Solar Kits', 'Promotions', 'Design', 'Install Your System', 'Retail Store',
-    'Wholesale Program', 'Programs', 'Discover More', 'Financing', 'Careers', 'Sitemap'
+    'Solar Kits', 'Promotions', 'Design', 'Install Your System', 'Our Store', 'Programs', 'Discover More', 'Financing'
   ];
 
   const categoryLinks = [
     'All Products', 'All Brands', 'New Arrivals', 'Kits & Bundles', 'Batteries',
     'Battery Accessories and Racking', 'Inverters', 'Solar Panels', 'Solar Panel Cleaning',
-    'Mounting Options & Hardware', 'Generators', 'System Components', 'Portable Power Stations',
+    'Mounting Options & Hardware', 'System Components', 'Portable Power Stations',
     'Mobile - RV - Golf Cart', 'Solar Powered Coolers', 'EV Chargers', 'High Efficiency Appliances',
     'Charge Controllers', 'Clearance', 'Shop by Project', 'Camping & Outdoors', 'EV Charging',
     'Homesteading', 'Marine and Boating', 'Mobile Adventures', 'Mounting Solutions', 'Survival Preparedness'
   ];
 
   const brandsLinks = [
-    'EG4 Electronics', 'Victron Energy', 'Growatt', 'Canadian Solar', 'OEM', 'BigBattery', 'View All'
+    'BLUTTI', 'EG4 Electronics', 'Victron Energy', 'Growatt', 'Canadian Solar', 'OEM', 'BigBattery', 'View All'
   ];
 
   const accountLinks = [
-    'Orders', 'Addresses', 'Wish Lists', 'Recently Viewed', 'Account Settings'
+    'Orders', 'Addresses', 'Recently Viewed', 'Account Settings'
   ];
 
   return (
@@ -33,18 +33,12 @@ export default function Footer() {
           {/* Column 1: Brand & Contact Info */}
           <div className="md:col-span-1 flex flex-col">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 mb-8">
-              <div className="w-8 h-8 rounded bg-[#22a055] flex items-center justify-center text-black font-extrabold text-lg">
-                ⚡
-              </div>
-              <div className="flex flex-col">
-                <span className="font-black text-xl text-[#0B1525] tracking-tighter leading-none">
-                  STEADYGRID
-                </span>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-neutral-500 leading-none mt-0.5">
-                  SOLAR
-                </span>
-              </div>
+            <Link to="/" className="flex items-center h-14 shrink-0 pb-16">
+              <img
+                src={logo}
+                alt="Logo"
+                className="w-auto max-h-[60px] sm:max-h-[70px] md:max-h-[80px] lg:max-h-[100px] object-contain"
+              />
             </Link>
 
             {/* Contact Details */}
@@ -52,16 +46,15 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                 <span>
-                  421 Industrial Dr E<br />
-                  Sulphur Springs, TX 75482
+                  Nairobi, Kenya
                 </span>
               </div>
               
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 shrink-0 mt-0.5" />
                 <span>
-                  Call Our USA-Based Experts:<br />
-                  903-441-2090
+                  Call Our Nairobi-Based Experts:<br />
+                  +254700000000
                 </span>
               </div>
 
@@ -80,7 +73,7 @@ export default function Footer() {
                 <span>
                   Monday - Friday: 8am - 7pm CT<br />
                   Saturday: 9am - 2pm CT<br />
-                  Holiday Hours (July 4): Closed
+                  Holiday Hours: Closed
                 </span>
               </div>
             </div>
@@ -148,7 +141,7 @@ export default function Footer() {
             </div>
             
             {/* BBB Badge Placeholder */}
-            <div className="mt-12 lg:mt-auto self-start border-[1.5px] border-[#005587] p-2 flex items-center justify-center cursor-pointer">
+            {/* <div className="mt-12 lg:mt-auto self-start border-[1.5px] border-[#005587] p-2 flex items-center justify-center cursor-pointer">
               <div className="text-[#005587] font-black text-2xl px-2 flex items-center gap-1">
                 <span className="text-sm font-bold flex flex-col leading-none text-center">
                   <span>BBB</span>
@@ -158,7 +151,7 @@ export default function Footer() {
                 A+
                 <span className="text-sm font-bold ml-1">rating</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -166,14 +159,13 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-[11px] text-neutral-500">
           <div>© 2026 SteadyGrid Solar.</div>
           
-          <div className="flex items-center gap-4 opacity-70 grayscale">
-            {/* Payment Icons placehoder text or simple SVGs, using text for now to match structure */}
+          {/* <div className="flex items-center gap-4 opacity-70 grayscale">
             <span className="font-black italic">AMEX</span>
             <span className="font-bold">DISCOVER</span>
             <span className="font-bold">MasterCard</span>
             <span className="font-bold italic text-blue-800">PayPal</span>
             <span className="font-black italic text-blue-900 tracking-tighter">VISA</span>
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-[#0B1525] transition-colors">Privacy Policy</a>

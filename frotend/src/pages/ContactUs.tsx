@@ -14,30 +14,28 @@ const contactMethods = [
     {
         icon: Phone,
         title: 'Call us',
-        detail: '903-441-2090',
-        href: 'tel:903-441-2090',
-        note: 'US-based support team',
+        detail: '+254700000000',
+        href: 'tel:+254700000000',
+        note: 'Kenya, Nairobi-based support team',
     },
     {
         icon: Mail,
         title: 'Email us',
-        detail: 'sales.rest@ecoflow.com',
-        href: 'mailto:sales.rest@ecoflow.com',
+        detail: 'sales@steadygrid.com',
+        href: 'mailto:sales@steadygrid.com',
         note: 'Sales and partnership enquiries',
     },
     {
         icon: MapPin,
         title: 'Visit online',
-        detail: 'ecoflow.com/me-ar',
-        href: 'https://www.ecoflow.com/me-ar',
+        detail: 'steadygrid.com',
+        href: 'https://www.steadygrid.com',
         note: 'Full product catalogue',
     },
 ];
 
 const offices = [
-    { country: 'United States', role: 'Global headquarters' },
-    { country: 'Germany', role: 'European headquarters' },
-    { country: 'Japan', role: 'Asia-Pacific headquarters' },
+    { country: 'Nairobi, Kenya', role: 'Our Headquarters' },
 ];
 
 const subjects = ['Product enquiry', 'Order support', 'Warranty & returns', 'Partnership', 'Other'];

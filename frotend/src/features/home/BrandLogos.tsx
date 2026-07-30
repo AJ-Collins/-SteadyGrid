@@ -7,35 +7,35 @@ export default function BrandLogos() {
       name: "BLUETTI",
       logoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxb4rT-M6odk32jV8Q-YwS90dUj9iTEnB2ywWebGUtAA&s=10",
-      href: "/shop/brands/bluetti",
+      href: "#",
     },
     {
       id: 2,
       name: "EcoFlow",
       logoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G42ewHJpwl4tGSTw5h6cFPMiqndhwYBbjzpiOmXMzw&s=10",
-      href: "/shop/brands/ecoflow",
+      href: "#",
     },
     {
       id: 3,
       name: "Growatt",
       logoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJRmiBQvrXDa1LCrmpEMyU-WUayLibR0A5FYfPhT2VPg&s=10",
-      href: "/shop/brands/growatt",
+      href: "#",
     },
     {
       id: 4,
       name: "Victron",
       logoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbh9A3RUni5J_oUfTiRYedBlJU3sJshiFk5cofrXKCLg&s=10",
-      href: "/shop/brands/victron",
+      href: "#",
     },
     {
       id: 5,
       name: "Deye",
       logoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxb4rT-M6odk32jV8Q-YwS90dUj9iTEnB2ywWebGUtAA&s=10",
-      href: "/shop/brands/deye",
+      href: "#",
     },
   ];
 

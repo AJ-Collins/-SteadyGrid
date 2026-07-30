@@ -14,9 +14,9 @@ import PageHeader from '../components/common/PageHeader';
 
 const stats = [
     { value: 2017, label: 'Founded', suffix: '' },
-    { value: 5, label: 'Users worldwide', suffix: 'M+' },
-    { value: 150, label: 'Regions served', suffix: '+' },
-    { value: 3, label: 'Global headquarters', suffix: '' },
+    { value: 1, label: 'Projected Users', suffix: 'M+' },
+    { value: 50, label: 'Regions served', suffix: '+' },
+    { value: 3, label: 'Headquarters', suffix: '' },
 ];
 
 const values = [
@@ -51,9 +51,7 @@ const ecosystem = [
 ];
 
 const offices = [
-    { country: 'United States', role: 'Global headquarters' },
-    { country: 'Germany', role: 'European headquarters' },
-    { country: 'Japan', role: 'Asia-Pacific headquarters' },
+    { country: 'Nairobi, Kenya', role: 'Global headquarters' },
 ];
 
 function useCountUp(target: number, inView: boolean, duration = 1400) {
@@ -139,12 +137,11 @@ export default function AboutUs() {
                 {/* ── Mission statement ── */}
                 <section className="border border-gray-200 bg-white px-6 md:px-12 py-10 md:py-16 rounded-md">
                     <div className="max-w-3xl">
-                        <Eyebrow>Since 2017</Eyebrow>
                         <h1 className="text-3xl md:text-5xl font-black text-[#0B1525] tracking-tight mt-3 mb-6 leading-tight">
                             Power a new world.
                         </h1>
                         <p className="text-sm md:text-base text-gray-500 leading-relaxed">
-                            EcoFlow is a leading provider of eco-friendly energy solutions. What began as a
+                            SteadyGrid is a growing provider of eco-friendly energy solutions. What began as a
                             commitment to be the first in flexible, innovative, reliable, simple, and thorough
                             power has grown into a global energy company serving individuals and families at
                             home, outdoors, and on the go.
@@ -176,11 +173,11 @@ export default function AboutUs() {
                             A trusted energy company, built for the real world.
                         </h2>
                         <p className="text-sm md:text-base text-gray-500 leading-relaxed">
-                            EcoFlow has become a reliable and trusted energy company for individuals and
-                            families across the world, providing accessible and renewable power solutions
+                            SteadyGrid has become a reliable and trusted energy company for individuals and
+                            families, providing accessible and renewable power solutions
                             for homes, outdoors, and off-grid living. With operational headquarters in the
-                            USA, Germany, and Japan, EcoFlow has empowered more than 5 million users in
-                            over 150 regions worldwide.
+                            Nairobi, kenya, SteadyGrid has empowered more than 1+ million users in
+                            over 50+ regions.
                         </p>
                     </div>
                     <div className="flex-1 min-h-[280px] lg:min-h-0">
@@ -238,7 +235,7 @@ export default function AboutUs() {
                     <h2 className="text-xl md:text-2xl font-black text-[#0B1525] tracking-tight mt-3 mb-6">
                         Headquartered across three continents.
                     </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 gap-px bg-gray-200 border border-gray-200">
                         {offices.map((office) => (
                             <div key={office.country} className="bg-white p-6 flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-[#0B1525] flex-shrink-0 mt-0.5" />
@@ -267,7 +264,7 @@ export default function AboutUs() {
                             className="inline-flex items-center justify-center gap-2 bg-[#0B1525] text-white text-xs font-bold py-3 px-6 hover:bg-[#1a2d4a] transition-colors duration-150"
                         >
                             <Mail className="w-4 h-4" />
-                            sales.rest@ecoflow.com
+                            sales@steadygrid.com
                         </a>
                     </div>
                 </section>

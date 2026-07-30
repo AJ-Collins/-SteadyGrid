@@ -7,10 +7,8 @@ import {
     MapPin, 
     Phone, 
     ShoppingBag, 
-    Search, 
     Package, 
     CheckCircle,
-    Star
 } from "lucide-react";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
@@ -341,33 +339,33 @@ function FeatureBlock({ icon, title, desc }: { icon: React.ReactNode, title: str
     );
 }
 
-function ReviewCard({ author, date, text, img }: { author: string, date: string, text: string, img: string }) {
-    return (
-        <div className="bg-white rounded-xl shadow-sm border border-neutral-100 p-5 flex flex-col h-full hover:shadow-md transition-shadow cursor-pointer">
-            <div className="flex items-center gap-3 mb-3">
-                <img src={img} alt={author} className="w-10 h-10 rounded-full bg-neutral-200 object-cover" />
-                <div className="flex flex-col">
-                    <span className="font-bold text-sm text-neutral-900 flex items-center gap-1">
-                        {author} <CheckCircle className="w-3 h-3 text-[#1A73E8] fill-current" />
-                    </span>
-                    <span className="text-neutral-400 text-[11px] font-medium">{date}</span>
-                </div>
-                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" className="w-4 h-4 ml-auto" alt="Google" />
-            </div>
-            <div className="flex gap-0.5 text-[#F5B50A] mb-2">
-                <Star className="w-3.5 h-3.5 fill-current" />
-                <Star className="w-3.5 h-3.5 fill-current" />
-                <Star className="w-3.5 h-3.5 fill-current" />
-                <Star className="w-3.5 h-3.5 fill-current" />
-                <Star className="w-3.5 h-3.5 fill-current" />
-            </div>
-            <p className="text-neutral-600 text-xs font-medium leading-relaxed flex-1">
-                {text}
-            </p>
-            <a href="#" className="text-[#1A73E8] text-[11px] font-bold mt-2 hover:underline">Read more</a>
-        </div>
-    );
-}
+// function ReviewCard({ author, date, text, img }: { author: string, date: string, text: string, img: string }) {
+//     return (
+//         <div className="bg-white rounded-xl shadow-sm border border-neutral-100 p-5 flex flex-col h-full hover:shadow-md transition-shadow cursor-pointer">
+//             <div className="flex items-center gap-3 mb-3">
+//                 <img src={img} alt={author} className="w-10 h-10 rounded-full bg-neutral-200 object-cover" />
+//                 <div className="flex flex-col">
+//                     <span className="font-bold text-sm text-neutral-900 flex items-center gap-1">
+//                         {author} <CheckCircle className="w-3 h-3 text-[#1A73E8] fill-current" />
+//                     </span>
+//                     <span className="text-neutral-400 text-[11px] font-medium">{date}</span>
+//                 </div>
+//                 <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" className="w-4 h-4 ml-auto" alt="Google" />
+//             </div>
+//             <div className="flex gap-0.5 text-[#F5B50A] mb-2">
+//                 <Star className="w-3.5 h-3.5 fill-current" />
+//                 <Star className="w-3.5 h-3.5 fill-current" />
+//                 <Star className="w-3.5 h-3.5 fill-current" />
+//                 <Star className="w-3.5 h-3.5 fill-current" />
+//                 <Star className="w-3.5 h-3.5 fill-current" />
+//             </div>
+//             <p className="text-neutral-600 text-xs font-medium leading-relaxed flex-1">
+//                 {text}
+//             </p>
+//             <a href="#" className="text-[#1A73E8] text-[11px] font-bold mt-2 hover:underline">Read more</a>
+//         </div>
+//     );
+// }
 
 function CategoryCard({ title, img }: { title: string, img: string }) {
     return (

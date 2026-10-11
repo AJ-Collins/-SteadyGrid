@@ -1,0 +1,152 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  ADMIN
+  MARKETER
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model User {
+  id          String               @id @default(cuid())
+  email       String               @unique
+  name        String?
+  password    String
+  role        Role                 @default(CUSTOMER)
+  orders      Order[]
+  sessions    Session[]
+  resetTokens PasswordResetToken[]
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+}
+
+// Server-side session. The refresh token is opaque; only its sha256 is
+// stored. Rotation + reuse detection live in server/auth/rotate-session.ts.
+model Session {
+  id               String    @id @default(cuid())
+  userId           String
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  refreshTokenHash String    @unique
+  expiresAt        DateTime
+  revokedAt        DateTime?
+  userAgent        String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+// Single-use password reset token. Only the sha256 hash is stored;
+// the raw token is delivered to the user (email in production).
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  slug     String    @unique
+  name     String
+  kind     String    @default("catalog") // catalog | project
+  products Product[]
+}
+
+model Brand {
+  id       String    @id @default(cuid())
+  slug     String    @unique
+  name     String
+  logoUrl  String?
+  products Product[]
+}
+
+model Product {
+  id          String      @id @default(cuid())
+  sku         String      @unique
+  slug        String      @unique
+  title       String
+  description String
+  brandId     String?
+  brand       Brand?      @relation(fields: [brandId], references: [id])
+  categoryId  String?
+  category    Category?   @relation(fields: [categoryId], references: [id])
+  price       Decimal     @db.Decimal(12, 2)
+  oldPrice    Decimal?    @db.Decimal(12, 2)
+  imageUrl    String?
+  inStock     Boolean     @default(true)
+  featured    Boolean     @default(false)
+  topSeller   Boolean     @default(false)
+  isNew       Boolean     @default(false)
+  orderItems  OrderItem[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Order {
+  id        String      @id @default(cuid())
+  userId    String?
+  user      User?       @relation(fields: [userId], references: [id])
+  status    OrderStatus @default(PENDING)
+  total     Decimal     @db.Decimal(12, 2)
+  items     OrderItem[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  qty       Int     @default(1)
+  unitPrice Decimal @db.Decimal(12, 2)
+}
+
+// Contact enquiries from the public contact form.
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+// Object-storage metadata. Binary bytes live in the storage driver
+// (local disk or S3-compatible cloud); the DB stores ONLY the key + URL.
+model FileAsset {
+  id        String   @id @default(cuid())
+  key       String   @unique // opaque object key, e.g. "products/2026/10/uuid.webp"
+  url       String // public URL used by the UI, e.g. "/api/files/products/..."
+  mimeType  String
+  sizeBytes Int
+  createdAt DateTime @default(now())
+}
+
+// CMS: editable site content (hero slides, banners, pages, stats).
+model ContentBlock {
+  id        String   @id @default(cuid())
+  key       String   @unique // e.g. "home:hero", "site:stats"
+  title     String
+  payload   Json
+  published Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}

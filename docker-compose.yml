@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: steadygrid-pg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: steadygrid
+    ports:
+      - "5433:5432"
+    volumes:
+      - steadygrid-pgdata:/var/lib/postgresql/data
+
+  minio:
+    image: minio/minio:latest
+    container_name: steadygrid-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    ports:
+      - "9000:9000" # S3 API
+      - "9001:9001" # Console
+    volumes:
+      - steadygrid-miniodata:/data
+
+  redis:
+    image: redis:7
+    container_name: steadygrid-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - steadygrid-redisdata:/data
+
+  # Edge gateway (nginx limit_req zones in infrastructure/nginx/).
+  # Requires registry access to pull nginx:alpine.
+  nginx:
+    image: nginx:alpine
+    container_name: steadygrid-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./infrastructure/nginx/00-shared.conf:/etc/nginx/conf.d/00-shared.conf:ro
+      - ./infrastructure/nginx/steadygrid.conf:/etc/nginx/conf.d/steadygrid.conf:ro
+    depends_on:
+      - web
+
+volumes:
+  steadygrid-pgdata:
+  steadygrid-miniodata:
+  steadygrid-redisdata:

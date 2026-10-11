@@ -1,32 +1,7 @@
-# Python
-backend/venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Django
-db.sqlite3
-*.log
-media/
-
-# Environment variables
+node_modules/
+.next/
 .env
-.env.*
-
-# Node
-frotend/node_modules/
-frotend/.next/
-frotend/out/
-frotend/build/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Misc
-*.swp
+.env.local
+coverage/
+test-results/
+playwright-report/
